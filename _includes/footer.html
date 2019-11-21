@@ -1,13 +1,35 @@
-<footer id="colophon" class="site-footer">
-  <p class="site-info">
-    {{ site.footer.content }}
-    &nbsp;
-    {% for link in site.footer.links %}
-    <a href="{{ link.url }}" {% assign new_window_is_not_empty = link.new_window | is_not_empty %}
-      {% if new_window_is_not_empty %}target="_blank" rel="noopener"
-      {% endif %}>{{ link.text }}</a>.
-    {% endfor %}
-  </p><!-- .site-info -->
-  <a id="to-top" class="to-top" href="#page"><span class="icon-arrow-up" aria-hidden="true"></span><span
-      class="screen-reader-text">Back to top</span></a>
-</footer><!-- .site-footer -->
+<footer class="site-footer h-card">
+  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">{{ site.title | escape }}</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">
+            {%- if site.author -%}
+              {{ site.author | escape }}
+            {%- else -%}
+              {{ site.title | escape }}
+            {%- endif -%}
+            </li>
+            {%- if site.email -%}
+            <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+            {%- endif -%}
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        {%- include social.html -%}
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>{{- site.description | escape -}}</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
