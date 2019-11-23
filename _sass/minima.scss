@@ -26,6 +26,20 @@ $content-width:    800px !default;
 $on-palm:          600px !default;
 $on-laptop:        800px !default;
 
+
+$xs:               0 !default;
+$sm:               544px !default;
+$md:               768px !default;
+$lg:               992px !default;
+$xl:               1200px !default;
+
+@mixin media($breakpoint) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+
 // Use media queries like this:
 // @include media-query($on-palm) {
 //   .wrapper {
@@ -41,6 +55,10 @@ $on-laptop:        800px !default;
 
 @mixin relative-font-size($ratio) {
   font-size: $base-font-size * $ratio;
+}
+
+@mixin relative-line-height($ratio) {
+  line-height: $base-line-height * $ratio;
 }
 
 // Import partials.

@@ -1,3 +1,41 @@
+<header class="site-header-2" role="banner">
+    <div class="site-header-wrapper">
+        <div class="branding">
+            <div class="logo">
+                <img src="https://themes.stackbit.com/demos/fresh/images/avatar.png">
+            </div>
+            <div class="identity">
+                <div class="title">
+                    <a href="/" rel="author" href="{{ "/" | relative_url }}">
+                        {{ site.title | escape }}
+                    </a>
+                </div>
+                <div class="tagline">{{ site.tagline | escape }}</div>
+            </div>
+        </div>
+
+        {%- assign default_paths = site.pages | map: "path" -%}
+        {%- assign page_paths = site.header_pages | default: default_paths -%}
+        {%- if page_paths -%}
+            <nav class="navigation">
+                <ul>
+                {%- for path in page_paths -%}
+                    {%- assign my_page = site.pages | where: "path", path | first -%}
+                    {%- if my_page.title -%}
+                        <li>
+                            <a href="{{ my_page.url | relative_url }}" title="{{ my_page.title | escape }}">
+                                {{ my_page.title | escape }}
+                            </a>
+                        </li>
+                    {%- endif -%}
+                {%- endfor -%}
+                </ul>
+            </nav>
+        {%- endif -%}
+    </div>
+</header>
+
+
 <header class="site-header" role="banner">
 
   <div class="wrapper">

@@ -1,7 +1,84 @@
+$header-height: 70px;
+$header-width: 150px;
+$header-padding: 10px;
+$header-background: #33383f;
+$header-foreground: #959ea9;
+
+.site-header-2 {
+  height: $header-height;
+  width: 100%;
+  background: $header-background;
+  color: $header-foreground;
+  overflow: hidden;
+  padding: $header-padding;
+
+  .site-header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .branding {
+    display: flex;
+    justify-content: space-between;
+
+    .logo {
+      width: $header-height - ($header-padding * 2);
+      height: $header-height - ($header-padding * 2);
+      border-radius: 50%;
+      overflow: hidden;
+
+      img {
+
+      }
+    }
+
+    .identity {
+      display: flex;
+      flex-direction: column;
+      padding: 0 0 0 $header-padding;
+
+      .title {
+        @include relative-font-size(1.2);
+        line-height: 1;
+        letter-spacing: -1px;
+      }
+
+      .tagline {
+        @include relative-font-size(0.8);
+        line-height: 1;
+      }
+    }
+  }
+
+  .navigation {
+    // display: none;
+    position: fixed;
+    top: $header-height;
+    left: -100%;
+    width: 100%;
+    height: calc(100% - #{$header-height});
+    background: $header-background;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 /**
  * Site header
  */
 .site-header {
+  display: none;
+
   border-top: 5px solid $grey-color-dark;
   border-bottom: 1px solid $grey-color-light;
   min-height: $spacing-unit * 1.865;
