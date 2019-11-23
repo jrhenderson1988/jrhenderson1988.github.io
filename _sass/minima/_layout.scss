@@ -10,12 +10,12 @@ $header-foreground: #959ea9;
   background: $header-background;
   color: $header-foreground;
   overflow: hidden;
-  padding: $header-padding;
 
   .site-header-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: $header-padding;
   }
 
   .branding {
