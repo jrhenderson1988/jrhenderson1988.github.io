@@ -1,85 +1,4 @@
-$header-height: 70px;
-$header-width: 150px;
-$header-padding: 10px;
-$header-background: #33383f;
-$header-foreground: #959ea9;
-
-.site-header-2 {
-  height: $header-height;
-  width: 100%;
-  background: $header-background;
-  color: $header-foreground;
-  overflow: hidden;
-
-  .site-header-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: $header-padding;
-  }
-
-  .branding {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    .logo {
-      width: $header-height - ($header-padding * 2);
-      height: $header-height - ($header-padding * 2);
-      border-radius: 50%;
-      overflow: hidden;
-
-      img {
-
-      }
-    }
-
-    .identity {
-      padding: 0 0 0 $header-padding;
-
-      .title {
-        font-size: 1.2rem;
-        line-height: 1;
-        letter-spacing: -1px;
-        color: #fff;
-
-        a {
-          color: inherit;
-        }
-      }
-
-      .tagline {
-        font-size: 0.8rem;
-      }
-    }
-  }
-
-  .navigation {
-    // display: none;
-    position: fixed;
-    top: $header-height;
-    left: -100%;
-    width: 100%;
-    height: calc(100% - #{$header-height});
-    background: $header-background;
-  }
-
-  .menu-icon {
-    color: #fff;
-    fill: #fff;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
+@import "./header";
 
 /**
  * Site header
@@ -96,7 +15,7 @@ $header-foreground: #959ea9;
 }
 
 .site-title {
-  @include relative-font-size(1.625);
+  font-size: 1.625rem;
   font-weight: 300;
   line-height: $base-line-height * $base-font-size * 2.25;
   letter-spacing: -1px;
@@ -196,7 +115,7 @@ $header-foreground: #959ea9;
 }
 
 .footer-heading {
-  @include relative-font-size(1.125);
+  font-size: 1.125rem;
   margin-bottom: $spacing-unit / 2;
 }
 
@@ -207,7 +126,7 @@ $header-foreground: #959ea9;
 }
 
 .footer-col-wrapper {
-  @include relative-font-size(0.9375);
+  font-size: 0.9375rem;
   color: $grey-color;
   margin-left: -$spacing-unit / 2;
   @extend %clearfix;
@@ -266,11 +185,11 @@ $header-foreground: #959ea9;
 }
 
 .page-heading {
-  @include relative-font-size(2);
+  font-size: 2rem;
 }
 
 .post-list-heading {
-  @include relative-font-size(1.75);
+  font-size: 1.75rem;
 }
 
 .post-list {
@@ -289,7 +208,7 @@ $header-foreground: #959ea9;
 
 .post-link {
   display: block;
-  @include relative-font-size(1.5);
+  font-size: 1.5rem;
 }
 
 
@@ -302,12 +221,12 @@ $header-foreground: #959ea9;
 }
 
 .post-title {
-  @include relative-font-size(2.625);
+  font-size: 2.625rem;
   letter-spacing: -1px;
   line-height: 1;
 
   @include media-query($on-laptop) {
-    @include relative-font-size(2.25);
+    font-size: 2.25rem;
   }
 }
 
@@ -315,26 +234,26 @@ $header-foreground: #959ea9;
   margin-bottom: $spacing-unit;
 
   h2 {
-    @include relative-font-size(2);
+    font-size: 2rem;
 
     @include media-query($on-laptop) {
-      @include relative-font-size(1.75);
+      font-size: 1.75rem;
     }
   }
 
   h3 {
-    @include relative-font-size(1.625);
+    font-size: 1.625rem;
 
     @include media-query($on-laptop) {
-      @include relative-font-size(1.375);
+      font-size: 1.375rem;
     }
   }
 
   h4 {
-    @include relative-font-size(1.25);
+    font-size: 1.25rem;
 
     @include media-query($on-laptop) {
-      @include relative-font-size(1.125);
+      font-size: 1.125rem;
     }
   }
 }

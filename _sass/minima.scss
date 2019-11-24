@@ -55,14 +55,6 @@ $xl:               1200px !default;
   }
 }
 
-@mixin relative-font-size($ratio) {
-  font-size: $base-font-size * $ratio;
-}
-
-@mixin relative-line-height($ratio) {
-  line-height: $base-line-height * $ratio;
-}
-
 // Import partials.
 @import
   "minima/base",
