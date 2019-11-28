@@ -184,6 +184,7 @@ pre {
 .wrapper {
   display: flex;
   max-width: $content-width;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding-left: $spacing-unit / 2;
@@ -205,6 +206,13 @@ pre {
   content: "";
   display: table;
   clear: both;
+}
+
+
+%no-clearfix:after {
+  content: normal;
+  display: inline;
+  clear: none;
 }
 
 

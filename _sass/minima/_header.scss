@@ -1,22 +1,29 @@
-$header-height: 50px + $spacing-unit;
-$header-width: 150px;
-$header-padding: $spacing-unit / 2;
 $header-background: #33383f;
 $header-foreground: #959ea9;
 $header-title-color: #fff;
-$menu-icon-color: $header-foreground;
-$menu-icon-hover-color: $header-title-color;
+
+$header-mobile-padding: $spacing-unit / 2;
+$header-mobile-height: 50px + ($header-mobile-padding * 2);
+$header-mobile-menu-icon-color: $header-foreground;
+$header-mobile-menu-icon-hover-color: $header-title-color;
+
+$header-padding: $spacing-unit;
+$header-width: 300px;
+$header-lg-width: 400px;
+$header-logo-size: 150px;
 
 body {
-  padding-top: $header-height;
+  padding-top: $header-mobile-height;
 }
 
 .site-header-2 {
+  display: flex;
+  align-items: center;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: $header-height;
+  height: $header-mobile-height;
   background: $header-background;
   color: $header-foreground;
   overflow: hidden;
@@ -32,21 +39,22 @@ body {
     }
   }
 
-  .site-header-wrapper {
+  .wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: $header-padding;
+
+    @extend %no-clearfix;
   }
 
   .branding {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    flex: 1;
 
     .logo {
-      width: $header-height - ($header-padding * 2);
-      height: $header-height - ($header-padding * 2);
+      width: $header-mobile-height - ($header-mobile-padding * 2);
+      height: $header-mobile-height - ($header-mobile-padding * 2);
       border-radius: 50%;
       overflow: hidden;
 
@@ -57,7 +65,7 @@ body {
     }
 
     .identity {
-      padding: 0 0 0 $header-padding;
+      padding: 0 0 0 $header-mobile-padding;
 
       .title {
         font-size: 1.2rem;
@@ -80,21 +88,98 @@ body {
   .navigation {
     display: none;
     position: fixed;
-    top: $header-height;
+    top: $header-mobile-height;
     left: -100%;
     width: 100%;
-    height: calc(100% - #{$header-height});
+    height: calc(100% - #{$header-mobile-height});
     background: $header-background;
   }
 
   .menu-icon {
-    color: $menu-icon-color;
-    fill: $menu-icon-color;
+    color: $header-mobile-menu-icon-color;
+    fill: $header-mobile-menu-icon-color;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
     &:hover {
-      color: $menu-icon-hover-color;
-      fill: $menu-icon-hover-color;
+      color: $header-mobile-menu-icon-hover-color;
+      fill: $header-mobile-menu-icon-hover-color;
       cursor: pointer;
     }
+  }
+}
+
+@include media($md) {
+  body {
+    padding-top: 0;
+    padding-left: $header-width;
+  }
+
+  .site-header-2 {
+    position: fixed;
+    width: $header-width;
+    height: 100vh;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    .wrapper {
+      align-items: center;
+      justify-content: flex-start;
+      flex-direction: column;
+      padding: $header-padding;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+
+    .branding {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+
+      .logo {
+        width: $header-logo-size;
+        height: $header-logo-size;
+
+        img {
+        }
+      }
+
+      .identity {
+        margin-top: $header-padding;
+        
+        .title {
+          a {
+          }
+        }
+
+        .tagline {
+        }
+      }
+    }
+
+    .menu-icon {
+      display: none;
+    }
+
+    .navigation {
+      display: block;
+      position: static;
+      top: auto;
+      left: auto;
+      width: auto;
+      height: auto;
+    }
+  }
+}
+
+@include media($lg) {
+  body {
+    padding-left: $header-lg-width;
+  }
+
+  .site-header-2 {
+    width: $header-lg-width;
   }
 }
