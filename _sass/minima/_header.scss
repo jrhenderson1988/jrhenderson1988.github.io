@@ -20,7 +20,7 @@ body {
   padding-top: $header-mobile-height;
 }
 
-.site-header-2 {
+.site-header {
   display: flex;
   align-items: center;
   position: absolute;
@@ -117,11 +117,10 @@ body {
     padding: $header-mobile-padding;
     transition: left .2s ease-in-out;
 
-    ul {
+    .main-menu {
       list-style: none;
       margin: 0;
       padding: 0;
-      border-bottom: 1px solid $header-border-color;
       font-size: 0.85em;
       text-transform: uppercase;
       letter-spacing: 0.15em;
@@ -129,7 +128,7 @@ body {
       
       li {
         padding: 0.5em 0;
-        border-top: 1px solid $header-border-color;
+        border-bottom: 1px solid $header-border-color;
 
         &.active {
           color: $header-navigation-active-color;
@@ -137,6 +136,29 @@ body {
 
         a:hover {
           color: $header-navigation-hover-color;
+        }
+      }
+    }
+
+    .social-icons {
+      margin-top: $header-mobile-padding;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      a {
+        margin-left: 1em;
+        border: 1px solid $header-border-color;
+        border-radius: 50%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 32px;
+        height: 32px;
+
+        &:first-child {
+          margin-left: 0;
         }
       }
     }
@@ -167,7 +189,7 @@ body {
     padding-left: $header-width;
   }
 
-  .site-header-2 {
+  .site-header {
     position: fixed;
     width: $header-width;
     height: 100vh;
@@ -231,6 +253,14 @@ body {
       margin-top: $header-padding / 2;
       padding: 0;
       background-color: inherit;
+
+      .main-menu {
+        border-top: 1px solid $header-border-color;
+      }
+
+      .social-icons {
+        margin-top: $header-padding / 2;
+      }
     }
   }
 }
