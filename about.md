@@ -1,18 +1,21 @@
 ---
 layout: page
-title: About
+menu_title: About
+title: About me
 permalink: /about
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+I'm a software engineer and consultant, working as a Senior Developer for [Scott Logic](https://www.scottlogic.com/).
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+- Mention preferred languages and passion for Java, Kotlin, Python and Go.
+- Mention experience with frameworks: Spring, Laravel, Django, Express etc.
+- Mention having worked in the financial sector
+- Mention past experience with PHP, Laravel
+- List languages and experience: Node/JS, Typescript, React, plenty of AWS
+- Interested in other languages like Rust, C# etc. and distributed systems, microservices, search engines etc.
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+I am a full-stack engineer with a strong preference for backend development. I've worked with many different languages and find that my passion about Java, Kotlin
 
+I
 
-[jekyll-organization]: https://github.com/jekyll
+I've spent the majority of my career working with PHP and the Laravel Framework but since joining Scott Logic I've had the opportunity to work with various different technology stacks.
