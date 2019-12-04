@@ -148,7 +148,7 @@ body {
       align-items: center;
   
       a {
-        margin-left: 1em;
+        margin-left: 0.5em;
         border: 1px solid $header-border-color;
         border-radius: 50%;
         display: inline-flex;
@@ -159,6 +159,17 @@ body {
 
         &:first-child {
           margin-left: 0;
+        }
+
+        &:hover {
+          color: #fff;
+          fill: #fff;
+
+          &.github { background-color: #333; }
+          &.linkedin { background-color: #0077b5; }
+          &.twitter { background-color: #1da1f2; }
+          &.stackoverflow { background-color: #f48024; }
+          &.facebook { background-color: #3b5998; }
         }
       }
     }
