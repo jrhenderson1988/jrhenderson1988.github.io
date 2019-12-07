@@ -5,11 +5,13 @@ title: About me
 permalink: /about
 ---
 
-I'm a software engineer and consultant, working as a Senior Developer for [Scott Logic](https://www.scottlogic.com/).
+I'm a software engineer and consultant, working as a Senior Developer at [Scott Logic](https://www.scottlogic.com/).
 
-I'm passionate about Java, Kotlin and Python but I'm very much a polyglot, having used significantly more languages during my time. I love virtually anything to do with software development but find that my interests primarily lie within microservices, distributed systems, search engines and languages.
+I'm passionate about Java, Kotlin and Python (and very much interested in Go and Rust) but very much a polyglot programmer, having used significantly more languages during my time. I live and breathe virtually anything to do with software development but find that my interests primarily lie within microservices, distributed systems, search engines and learning new languages.
 
-My career has seen me working on some pretty interesting projects, from travel agency sites and marketing intelligence applications to car-sharing platforms and trading applications in the financial sector.
+Throughout my career I've worked on some interesting projects, from travel agency sites and marketing intelligence applications to car-sharing platforms and trading applications in the financial sector.
+
+Much of my working life has been spent writing Laravel applications with PHP and doing a decent amount of frontend JavaScript. However, during my time with Scott Logic and in my personal
 
 - Mention preferred languages and passion for Java, Kotlin, Python and Go.
 - Mention experience with frameworks: Spring, Laravel, Django, Express etc.
