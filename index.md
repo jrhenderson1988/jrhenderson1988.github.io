@@ -10,4 +10,6 @@ I'm a software developer and consultant, working as a Senior Developer at [Scott
 
 I live and breathe software engineering and find that my interests mostly lie within microservices, distributed systems, search engines and learning new languages. I'm also passionate about Java, Kotlin, Python and Go.
 
-[Find out more about me here]({{ site.baseurl }}{% link about.md %})
+If you'd like to know more, find out more [here]({{ site.baseurl }}{% link about.md %}).
+
+<!-- intro to blog and list most recent posts... also blog at Scott Logic -->
