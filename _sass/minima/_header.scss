@@ -1,5 +1,3 @@
-
-
 .site-header {
   display: flex;
   align-items: center;
@@ -8,13 +6,13 @@
   left: 0;
   width: 100%;
   height: $header-mobile-height;
-  background: $header-background;
-  color: $header-foreground;
+  background: $header-background-color;
+  color: $header-text-color;
   overflow: hidden;
-  border-bottom: 1px solid $header-border-color;
+  border-bottom: 1px solid $header-divider-color;
 
   a {
-    color: inherit;
+    color: $header-link-color;
 
     &:hover {
       text-decoration: none;
@@ -95,7 +93,7 @@
     left: -100%;
     width: 100%;
     height: calc(100% - #{$header-mobile-height});
-    background: $header-background;
+    background: $header-background-color;
     padding: $header-mobile-vertical-padding $header-mobile-horizontal-padding;
     transition: left .2s ease-in-out;
 
@@ -110,7 +108,7 @@
       
       li {
         padding: 0.5em 0;
-        border-bottom: 1px solid $header-border-color;
+        border-bottom: 1px solid $header-divider-color;
 
         &.active {
           color: $header-navigation-active-color;
@@ -131,27 +129,26 @@
   
       a {
         margin-left: 0.5em;
-        border: 1px solid $header-border-color;
+        border: 1px solid $header-divider-color;
         border-radius: 50%;
         display: inline-flex;
         justify-content: center;
         align-items: center;
         width: 32px;
         height: 32px;
+        color: $header-link-color;
+        fill: $header-link-color;
 
         &:first-child {
           margin-left: 0;
         }
 
         &:hover {
-          color: #fff;
-          fill: #fff;
-
-          &.github { background-color: #333; }
-          &.linkedin { background-color: #0077b5; }
-          &.twitter { background-color: #1da1f2; }
-          &.stackoverflow { background-color: #f48024; }
-          &.facebook { background-color: #3b5998; }
+          &.github { background-color: #333; color: #fff; fill: #fff; }
+          &.linkedin { background-color: #0077b5; color: #fff; fill: #fff; }
+          &.twitter { background-color: #1da1f2; color: #fff; fill: #fff; }
+          &.stackoverflow { background-color: #f48024; color: #fff; fill: #fff; }
+          &.facebook { background-color: #3b5998; color: #fff; fill: #fff; }
         }
       }
     }
@@ -189,7 +186,7 @@
     overflow-x: hidden;
     overflow-y: auto;
     border-bottom: none;
-    border-right: 1px solid $header-border-color;
+    border-right: 1px solid $header-divider-color;
 
     .wrapper {
       align-items: center;
@@ -246,11 +243,53 @@
       background-color: inherit;
 
       .main-menu {
-        border-top: 1px solid $header-border-color;
+        border-top: 1px solid $header-divider-color;
       }
 
       .social-icons {
         margin-top: $header-padding / 2;
+      }
+    }
+  }
+}
+
+
+@include dark-mode {
+  .site-header {
+    background-color: $dark-mode-header-background-color;
+    color: $dark-mode-header-text-color;
+    border-bottom-color: $dark-mode-header-divider-color;
+    border-right-color: $dark-mode-header-divider-color;
+
+    a {
+      color: $dark-mode-header-link-color;
+    }
+
+    .navigation {
+      background: $dark-mode-header-background-color;
+
+      .main-menu {
+        border-top-color: $dark-mode-header-divider-color;
+
+        li {
+          border-bottom-color: $dark-mode-header-divider-color;
+        }
+      }
+
+      .social-icons {
+        a {
+          border-color: $dark-mode-header-divider-color;
+          color: $dark-mode-header-link-color;
+          fill: $dark-mode-header-link-color;
+        }
+      }
+    }
+
+    .branding {
+      .identity {
+        .title {
+          color: $dark-mode-header-title-color;
+        }
       }
     }
   }

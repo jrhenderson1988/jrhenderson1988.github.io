@@ -12,14 +12,20 @@ $base-line-height: 1.5 !default;
 
 $spacing-unit:     30px !default;
 
-$heading-color:    #33383f !default;
-$text-color:       #555e69 !default;
-$background-color: #fdfdfd !default;
-$brand-color:      #10bcf9 !default;
+$grey-color:                 #828282 !default;
+$grey-color-light:           lighten($grey-color, 40%) !default;
+$grey-color-dark:            darken($grey-color, 25%) !default;
 
-$grey-color:       #828282 !default;
-$grey-color-light: lighten($grey-color, 40%) !default;
-$grey-color-dark:  darken($grey-color, 25%) !default;
+$heading-color:              #33383f !default;
+$text-color:                 #555e69 !default;
+$background-color:           #fdfdfd !default;
+$brand-color:                #10bcf9 !default;
+$divider-color:              $grey-color-light !default;
+
+$dark-mode-heading-color:    #ebe9f1 !default;
+$dark-mode-text-color:       #cccccc !default;
+$dark-mode-background-color: #1e1e21 !default;
+$dark-mode-divider-color:    #222225 !default;
 
 $table-text-align: left !default;
 
@@ -41,19 +47,26 @@ $container-vertical-spacing: $spacing-unit * 2;
 $container-horizontal-spacing: $spacing-unit;
 
 // site-header
-$header-background: $background-color;//darken($background-color, 3%); // $text-color;
-$header-foreground: $text-color;// #959ea9;
-$header-title-color: $heading-color;//#fff;
-$header-border-color: $grey-color-light;//#555e69;
+$header-background-color: $background-color;
+$header-text-color: $text-color;
+$header-title-color: $heading-color;
+$header-link-color: $text-color;
+$header-divider-color: $divider-color;
 $header-logo-box-shadow: 0 0 1px 8px rgba($brand-color, 0.1);
 $header-navigation-hover-color: $brand-color;
 $header-navigation-active-color: $brand-color;
+
+$dark-mode-header-background-color: $dark-mode-background-color;
+$dark-mode-header-text-color: $dark-mode-text-color;
+$dark-mode-header-title-color: $dark-mode-heading-color;
+$dark-mode-header-divider-color: $dark-mode-divider-color;
+$dark-mode-header-link-color: $dark-mode-text-color;
 
 $header-mobile-position: fixed;
 $header-mobile-vertical-padding: $spacing-unit / 2;
 $header-mobile-horizontal-padding: $spacing-unit / 2;
 $header-mobile-height: 50px + ($header-mobile-vertical-padding * 2);
-$header-mobile-menu-icon-color: $header-foreground;
+$header-mobile-menu-icon-color: $header-text-color;
 $header-mobile-menu-icon-hover-color: $header-title-color;
 
 $header-padding: $spacing-unit;
@@ -69,6 +82,12 @@ $content-mobile-horizontal-spacing: $spacing-unit / 2;
 
 @mixin media($breakpoint) {
   @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin dark-mode() {
+  @media (prefers-color-scheme: dark) {
     @content;
   }
 }
