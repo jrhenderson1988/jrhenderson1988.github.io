@@ -1,29 +1,9 @@
-$header-background: darken($background-color, 3%);//$background-color; // $text-color;
-$header-foreground: $text-color;// #959ea9;
-$header-title-color: $heading-color;//#fff;
-$header-border-color: $grey-color-light;//#555e69;
-$header-logo-box-shadow: 0 0 1px 8px rgba($brand-color, 0.1);
-$header-navigation-hover-color: $brand-color;
-$header-navigation-active-color: $brand-color;
 
-$header-mobile-padding: $spacing-unit / 2;
-$header-mobile-height: 50px + ($header-mobile-padding * 2);
-$header-mobile-menu-icon-color: $header-foreground;
-$header-mobile-menu-icon-hover-color: $header-title-color;
-
-$header-padding: $spacing-unit;
-$header-vertical-padding: $spacing-unit * 2;
-$header-width: 300px;
-$header-logo-size: 120px;
-
-body {
-  padding-top: $header-mobile-height;
-}
 
 .site-header {
   display: flex;
   align-items: center;
-  position: absolute;
+  position: $header-mobile-position ;
   top: 0;
   left: 0;
   width: 100%;
@@ -67,6 +47,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    padding: $header-mobile-vertical-padding $header-mobile-horizontal-padding;
 
     @extend %no-clearfix;
   }
@@ -77,8 +59,8 @@ body {
     flex: 1;
 
     .logo {
-      width: $header-mobile-height - ($header-mobile-padding * 2);
-      height: $header-mobile-height - ($header-mobile-padding * 2);
+      width: $header-mobile-height - ($header-mobile-horizontal-padding * 2);
+      height: $header-mobile-height - ($header-mobile-vertical-padding * 2);
       border-radius: 50%;
       box-shadow: $header-logo-box-shadow;
       overflow: hidden;
@@ -90,7 +72,7 @@ body {
     }
 
     .identity {
-      padding: 0 0 0 $header-mobile-padding;
+      padding: 0 0 0 $header-mobile-horizontal-padding;
 
       .title {
         font-size: 1.2rem;
@@ -114,7 +96,7 @@ body {
     width: 100%;
     height: calc(100% - #{$header-mobile-height});
     background: $header-background;
-    padding: $header-mobile-padding;
+    padding: $header-mobile-vertical-padding $header-mobile-horizontal-padding;
     transition: left .2s ease-in-out;
 
     .main-menu {
@@ -141,7 +123,7 @@ body {
     }
 
     .social-icons {
-      margin-top: $header-mobile-padding;
+      margin-top: $header-mobile-vertical-padding;
       width: 100%;
       display: flex;
       justify-content: center;
@@ -195,14 +177,12 @@ body {
 }
 
 @include media($md) {
-  body {
-    padding-top: 0;
-    padding-left: $header-width;
-  }
-
   .site-header {
     position: fixed;
     width: $header-width;
+    top: 0;
+    left: auto;
+    margin-left: -$header-width;
     height: 100vh;
     align-items: flex-start;
     justify-content: flex-start;

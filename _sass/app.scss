@@ -24,7 +24,7 @@ $grey-color-dark:  darken($grey-color, 25%) !default;
 $table-text-align: left !default;
 
 // Width of the content area
-$content-width:    800px !default;
+$content-width:    700px !default;
 
 $on-palm:          600px !default;
 $on-laptop:        800px !default;
@@ -35,6 +35,37 @@ $sm:               544px !default;
 $md:               768px !default;
 $lg:               992px !default;
 $xl:               1200px !default;
+
+// site-container
+$container-vertical-spacing: $spacing-unit * 2;
+$container-horizontal-spacing: $spacing-unit;
+
+// site-header
+$header-background: $background-color;//darken($background-color, 3%); // $text-color;
+$header-foreground: $text-color;// #959ea9;
+$header-title-color: $heading-color;//#fff;
+$header-border-color: $grey-color-light;//#555e69;
+$header-logo-box-shadow: 0 0 1px 8px rgba($brand-color, 0.1);
+$header-navigation-hover-color: $brand-color;
+$header-navigation-active-color: $brand-color;
+
+$header-mobile-position: fixed;
+$header-mobile-vertical-padding: $spacing-unit / 2;
+$header-mobile-horizontal-padding: $spacing-unit / 2;
+$header-mobile-height: 50px + ($header-mobile-vertical-padding * 2);
+$header-mobile-menu-icon-color: $header-foreground;
+$header-mobile-menu-icon-hover-color: $header-title-color;
+
+$header-padding: $spacing-unit;
+$header-vertical-padding: $spacing-unit * 2;
+$header-width: 300px;
+$header-logo-size: 120px;
+
+// site-content
+$content-vertical-spacing: $spacing-unit * 2;
+$content-horizontal-spacing: $spacing-unit;
+$content-mobile-vertical-spacing: $spacing-unit / 2;
+$content-mobile-horizontal-spacing: $spacing-unit / 2;
 
 @mixin media($breakpoint) {
   @media screen and (min-width: $breakpoint) {
