@@ -4,13 +4,13 @@
 // Define defaults for each variable.
 
 // $base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-$base-font-family: "Roboto" !default;
-$base-font-size:   16px !default;
-$base-font-weight: 400 !default;
-$small-font-size:  $base-font-size * 0.875 !default;
-$base-line-height: 1.5 !default;
+$base-font-family:           "Roboto" !default;
+$base-font-size:             16px !default;
+$base-font-weight:           400 !default;
+$small-font-size:            $base-font-size * 0.875 !default;
+$base-line-height:           1.5 !default;
 
-$spacing-unit:     30px !default;
+$spacing-unit:               30px !default;
 
 $grey-color:                 #828282 !default;
 $grey-color-light:           lighten($grey-color, 40%) !default;
@@ -25,22 +25,22 @@ $divider-color:              $grey-color-light !default;
 $dark-mode-heading-color:    #ebe9f1 !default;
 $dark-mode-text-color:       #cccccc !default;
 $dark-mode-background-color: #1e1e21 !default;
-$dark-mode-divider-color:    #222225 !default;
+$dark-mode-divider-color:    #2b2b2b !default;//#222225 !default;
 
-$table-text-align: left !default;
+$table-text-align:           left !default;
 
 // Width of the content area
-$content-width:    780px !default;
+$content-width:              780px !default;
 
-$on-palm:          600px !default;
-$on-laptop:        800px !default;
+$on-palm:                    600px !default;
+$on-laptop:                  800px !default;
 
 
-$xs:               0 !default;
-$sm:               544px !default;
-$md:               768px !default;
-$lg:               992px !default;
-$xl:               1200px !default;
+$xs:                         0 !default;
+$sm:                         544px !default;
+$md:                         768px !default;
+$lg:                         992px !default;
+$xl:                         1200px !default;
 
 // site-container
 $container-vertical-spacing: $spacing-unit * 2;

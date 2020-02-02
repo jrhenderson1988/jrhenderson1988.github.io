@@ -1,6 +1,11 @@
 ---
-title: "Building Microservices with Spring Boot - Part 1"
+title: "Building Microservices with Spring Boot"
+subtitle: "Getting started, service discovery and the API gateway"
 summary: "A practical series on building Microservices with Spring Boot and Spring Cloud. In this post we get started by building some services for an online shop and tie them together with 2 more services, backed by Netflix's Eureka and Zuul."
+part: 1
+originally_posted:
+  at: https://blog.scottlogic.com/2019/10/31/building-microservices-with-spring-boot.html
+  text: on the Scott Logic Blog
 ---
 
 The term "microservices" is used to describe a software architectural design whereby many loosely-coupled components run independently, but ultimately work together as a single application. Services typically focus on particular aspects of a business domain or business entities and they tyically use a network to communicate.

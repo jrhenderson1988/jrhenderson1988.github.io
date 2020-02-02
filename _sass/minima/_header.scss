@@ -10,6 +10,7 @@
   color: $header-text-color;
   overflow: hidden;
   border-bottom: 1px solid $header-divider-color;
+  z-index: 10000000;
 
   a {
     color: $header-link-color;

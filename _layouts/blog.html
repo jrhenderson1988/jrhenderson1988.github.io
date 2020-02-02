@@ -10,11 +10,10 @@ layout: page
   {%- for post in site.posts -%}
   <li class="post-list-item">
     <a href="{{ site.url }}{{ post.url }}" class="post-list-item-link">
-      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
       <h2 class="post-list-item-title">{{ post.title | escape }}</h2>
       <p class="post-list-item-summary">{{ post.summary | escape }}</p>
       <p class="post-list-item-meta">
-        <span class="post-list-item-date">{{ post.date | date: date_format }}</span>
+        <span class="post-list-item-date">{{ post.date | date_to_string: "ordinal" }}</span>
         /
         <span class="post-list-item-reading-time">{% include reading-time.html post=post %}</span>
       </p>

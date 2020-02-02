@@ -1,6 +1,11 @@
 ---
-title: "Building Microservices with Spring Boot - Part 2"
+title: "Building Microservices with Spring Boot"
+subtitle: "Inter-service communication, scaling and resiliency"
 summary: "The second part of a practical series on building Microservices with Spring Boot and Spring Cloud. In this post we expand on our previous online store project, scaling out while introducing the concept of client-side load-balancing using Netflix Ribbon and Feign. We also implement fault and latency tolerance with Netflix Hystrix."
+part: 2
+originally_posted:
+  at: Scott Logic Blog
+  link: https://blog.scottlogic.com/2019/11/19/building-microservices-with-spring-boot-2.html
 ---
 
 In this installment of *Building Microservices with Spring Boot*, we're going to continue where we left off in [part 1]({{ site.url }}/2019/10/31/building-microservices-with-spring-boot.html) by introducing a few new concepts to make our services more scalable and resilient.

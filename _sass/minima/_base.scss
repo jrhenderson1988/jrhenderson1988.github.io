@@ -106,16 +106,23 @@ li {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: bold;
+  font-weight: normal;//bold;
   color: $heading-color;
+  line-height: 1.1;
 
   @include dark-mode {
     color: $dark-mode-heading-color;
   }
 }
 
-h1 { font-size: 2.5em; }
-h2 { font-size: 2.2em; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.17rem; }
+h4 { font-size: 1rem; }
+h5 { font-size: .83rem; }
+h6 { font-size: .67rem; }
+// h1 { font-size: 2.5em; }
+// h2 { font-size: 2.2em; }
 
 
 /**
@@ -179,27 +186,6 @@ pre {
     padding-left: 0;
   }
 }
-
-
-
-/**
- * Wrapper
- */
-// .wrapper {
-//   display: flex;
-//   max-width: $content-width;
-//   width: 100%;
-//   margin-left: auto;
-//   margin-right: auto;
-//   padding-left: $spacing-unit / 2;
-//   padding-right: $spacing-unit / 2;
-//   @extend %clearfix;
-
-//   @include media($md) {
-//     padding-left: $spacing-unit;
-//     padding-right: $spacing-unit;
-//   }
-// }
 
 
 

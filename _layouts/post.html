@@ -4,13 +4,25 @@ layout: default
 <article class="page" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="page-header">
-    <h1 class="page-title" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta">
-      <time class="post-date" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        {{ page.date | date: date_format }}
-      </time>
-      <p class="post-author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <h1 class="page-title" itemprop="name headline">
+      {{ page.title | escape }}
+      {%- if page.part -%}
+      <span class="page-title-part">
+        (Part <span itemprop="position">{{ page.part }}</span>)
+      </span>
+      {%- endif -%}
+    </h1>
+    {%- if page.subtitle -%}
+    <h2 class="page-subtitle">{{ page.subtitle }}</h2>
+    {%- endif -%}
+    <p class="page-meta">
+      {% include reading-time.html post=page %}
+      &mdash;
+      <span class="post-date" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {{ page.date | date_to_string: "ordinal" }}
+      </span>
+      &mdash;
+      <span class="post-author" itemprop="author" itemscope itemtype="http://schema.org/Person">
         <span itemprop="name">
           {%- if page.author -%}
           {{ page.author }}
@@ -18,7 +30,18 @@ layout: default
           {{ site.default_author }}
           {%- endif -%}
         </span>
-      </p>
+      </span>
+      {%- if page.originally_posted.at -%}
+      &mdash;
+      Originally posted
+      <a href="{{ page.originally_posted.at }}" target="_blank" rel="nofollow">
+        {%- if page.originally_posted.text-%}
+        {{ page.originally_posted.text }}
+        {%- else -%}
+        here
+        {%- endif -%}
+      </a>
+      {%- endif -%}
     </p>
 
   </header>
