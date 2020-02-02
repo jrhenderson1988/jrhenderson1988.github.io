@@ -182,9 +182,15 @@ hr {
 pre,
 code {
   font-size: 0.9375rem;
-  border: 1px solid $grey-color-light;
+  border: 1px solid $code-divider-color;
   border-radius: 3px;
-  background-color: #eef;
+  background-color: $code-background-color;
+
+  @include dark-mode {
+    border-color: $dark-mode-code-divider-color;
+    background-color: $dark-mode-code-background-color;
+    color: $dark-mode-code-color;
+  }
 }
 
 code {

@@ -207,7 +207,7 @@ public ResponseWrapper<List<Order>> getAllOrders(@RequestParam(required = false)
 Boot the Discovery, Customer and Gateway services as normal. Then we'll launch multiple instances of the Order Service on different ports using the following command (replace `<port>` with a different number each time):
 
 ~~~bash
-./gradlew bootRun --args='--server.port=<port>'
+$ ./gradlew bootRun --args='--server.port=<port>'
 ~~~
 
 Wait a couple of minutes for everything to register with the Discovery Service and for the updated registries to be propagated. Take a look at the [Eureka dashboard](http://localhost:3000) - under *Instances currently registered with Eureka* you should see multiple instances of the Order Service:
