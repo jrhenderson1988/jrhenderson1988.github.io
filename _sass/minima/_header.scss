@@ -143,12 +143,18 @@
           margin-left: 0;
         }
 
+        &.github { background-color: #333; color: #fff; fill: #fff; }
+        &.linkedin { background-color: #0077b5; color: #fff; fill: #fff; }
+        &.twitter { background-color: #1da1f2; color: #fff; fill: #fff; }
+        &.stackoverflow { background-color: #f48024; color: #fff; fill: #fff; }
+        &.facebook { background-color: #3b5998; color: #fff; fill: #fff; }
+
+        &.linkedin svg, &.stackoverflow svg {
+          margin-top: -2px;
+        }
+
         &:hover {
-          &.github { background-color: #333; color: #fff; fill: #fff; }
-          &.linkedin { background-color: #0077b5; color: #fff; fill: #fff; }
-          &.twitter { background-color: #1da1f2; color: #fff; fill: #fff; }
-          &.stackoverflow { background-color: #f48024; color: #fff; fill: #fff; }
-          &.facebook { background-color: #3b5998; color: #fff; fill: #fff; }
+          border: 0;
         }
       }
     }

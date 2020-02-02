@@ -22,7 +22,8 @@ description: >-
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
-url: "http://jrhenderson1988.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: https://jrhenderson1988.github.io # the base hostname & protocol for your site, e.g. http://example.com
+default_author: Jonathon
 
 social_icons:
   github: https://github.com/jrhenderson1988
@@ -31,10 +32,14 @@ social_icons:
   stackoverflow: https://stackoverflow.com/users/2244675/jonathon
   facebook: https://www.facebook.com/jrhenderson1988
 
+show_exerpts: true
+
 # Build settings
 markdown: kramdown
-plugins:
-  - jekyll-feed
+# plugins:
+#   - jekyll-feed
+
+permalink: /:categories/:year/:month/:day/:title
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

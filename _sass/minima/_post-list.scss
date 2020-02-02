@@ -1,0 +1,40 @@
+
+$post-list-item-gap: $spacing-unit;
+
+$post-list-item-title-color: $heading-color;
+$post-list-item-summary-color: $text-color;
+$post-list-item-meta-color: $text-color;
+
+$post-list-item-title-font-size: 1.75rem;
+$post-list-item-summary-font-size: 1rem;
+$post-list-item-meta-font-size: 1rem;
+
+
+.post-list {
+  margin-left: 0;
+  list-style: none;
+
+  .post-list-item {
+    margin-bottom: $post-list-item-gap;
+
+    .post-list-item-link {
+      text-decoration: none;
+
+      .post-list-item-title {
+        color: $post-list-item-title-color;
+        font-size: $post-list-item-title-font-size;
+        margin: 0;
+      }
+      .post-list-item-summary {
+        color: $post-list-item-summary-color;
+        font-size: $post-list-item-summary-font-size;
+        margin: 0;
+      }
+      .post-list-item-meta {
+        color: $post-list-item-meta-color;
+        font-size: $post-list-item-meta-font-size;
+        margin: 0;
+      }
+    }
+  }
+}
