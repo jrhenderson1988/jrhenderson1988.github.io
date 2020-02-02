@@ -4,11 +4,11 @@ subtitle: "Inter-service communication, scaling and resiliency"
 summary: "The second part of a practical series on building Microservices with Spring Boot and Spring Cloud. In this post we expand on our previous online store project, scaling out while introducing the concept of client-side load-balancing using Netflix Ribbon and Feign. We also implement fault and latency tolerance with Netflix Hystrix."
 part: 2
 originally_posted:
-  at: Scott Logic Blog
-  link: https://blog.scottlogic.com/2019/11/19/building-microservices-with-spring-boot-2.html
+  at: https://blog.scottlogic.com/2019/11/19/building-microservices-with-spring-boot-2.html
+  text: on the Scott Logic Blog
 ---
 
-In this installment of *Building Microservices with Spring Boot*, we're going to continue where we left off in [part 1]({{ site.url }}/2019/10/31/building-microservices-with-spring-boot.html) by introducing a few new concepts to make our services more scalable and resilient.
+In this installment of *Building Microservices with Spring Boot*, we're going to continue where we left off in [part 1]({{ site.url }}{% post_url 2019-10-31-building-microservices-with-spring-boot %}) by introducing a few new concepts to make our services more scalable and resilient.
 
 Just like last time, all of the code for this series is available on [GitHub](https://github.com/jrhenderson1988/building-microservices-with-spring-boot/tree/part-2).
 
@@ -212,7 +212,7 @@ Boot the Discovery, Customer and Gateway services as normal. Then we'll launch m
 
 Wait a couple of minutes for everything to register with the Discovery Service and for the updated registries to be propagated. Take a look at the [Eureka dashboard](http://localhost:3000) - under *Instances currently registered with Eureka* you should see multiple instances of the Order Service:
 
-![Instances Registered with Eureka]({{ site.url }}/assets/2019-11-19-building-microservices-with-spring-boot-2/instances-registered-with-eureka.jpg "Instances Registered with Eureka")
+![Instances Registered with Eureka]({{ site.url }}{% link /assets/2019-11-19-building-microservices-with-spring-boot-2/instances-registered-with-eureka.jpg %} "Instances Registered with Eureka")
 
 Make a few `GET` requests to [http://localhost/customers/2/orders](http://localhost/customers/2/orders) and take note of the `port` in the response. It should change each time.
 
@@ -232,7 +232,7 @@ Distributed architectures depend on the ability of many interconnected services 
 
 Calls to external systems are wrapped in [commands](http://en.wikipedia.org/wiki/Command_pattern), which are typically run in separate threads. Hystrix oversees execution, timing out calls that run over configured thresholds and detects errors/exceptions. Failure rates are monitored and when a defined limit is exceeded, a circuit-breaker is tripped, halting the flow of traffic to allow the overwhelmed or failing service an opportunity to recover.
 
-![Hystrix Diagram]({{ site.url }}/assets/2019-11-19-building-microservices-with-spring-boot-2/hystrix-diagram.svg "Hystrix Diagram")
+![Hystrix Diagram]({{ site.url }}{% link /assets/2019-11-19-building-microservices-with-spring-boot-2/hystrix-diagram.svg %} "Hystrix Diagram")
 
 Feign also includes support for Hystrix although it is not enabled by default. When Hystrix is on the classpath and explicitly enabled in the configuration, Spring Cloud OpenFeign automatically configures and integrates it with Feign clients.
 
