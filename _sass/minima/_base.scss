@@ -148,9 +148,9 @@ a {
  */
 blockquote {
   color: $grey-color;
-  border-left: 4px solid $grey-color-light;
+  border-left: 4px solid $brand-color;
   padding-left: $spacing-unit / 2;
-  font-size: 1.125rem;
+  // font-size: 1.125rem;
   letter-spacing: -1px;
   font-style: italic;
 
@@ -159,6 +159,21 @@ blockquote {
   }
 }
 
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: $divider-color;
+  margin: ($spacing-unit / 2) 0;
+
+  @include dark-mode {
+    background-color: $dark-mode-divider-color;
+  }
+
+  @include media($md) {
+    margin: $spacing-unit 0;
+  }
+}
 
 
 /**

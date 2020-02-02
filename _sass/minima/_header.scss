@@ -296,6 +296,10 @@
       .identity {
         .title {
           color: $dark-mode-header-title-color;
+
+          a {
+            color: $dark-mode-header-title-color;
+          }
         }
       }
     }

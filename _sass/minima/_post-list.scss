@@ -6,18 +6,21 @@ $post-list-item-title-part-font-size: 1.1rem;
 $post-list-item-subtitle-font-size: 1.2rem;
 $post-list-item-summary-font-size: 0.9rem;
 $post-list-item-meta-font-size: 0.8rem;
-$post-list-item-inter-part-gap: $spacing-unit / 4;
+$post-list-item-internal-gap: $spacing-unit / 4;
 
-$post-list-item-title-mobile-font-size: 1.3rem;
-$post-list-item-title-part-mobile-font-size: 1rem;
-$post-list-item-subtitle-mobile-font-size: 1.1rem;
+$mobile-post-list-item-title-font-size: 1.3rem;
+$mobile-post-list-item-title-part-font-size: 1rem;
+$mobile-post-list-item-subtitle-font-size: 1.05rem;
+$mobile-post-list-item-summary-font-size: 0.9rem;
+$mobile-post-list-item-meta-font-size: 0.75rem;
+$mobile-post-list-item-internal-gap: $spacing-unit / 4;
 
 $post-list-item-title-color: $heading-color;
 $post-list-item-title-hover-color: $brand-color;
 $post-list-item-title-part-color: $text-color;
 $post-list-item-subtitle-color: $text-color;
 $post-list-item-summary-color: $text-color;
-$post-list-item-meta-color: $text-color;
+$post-list-item-meta-color: $meta-color;
 $post-list-item-divider-color: $divider-color;
 $post-list-item-divider-hover-color: $brand-color;
 
@@ -25,7 +28,7 @@ $dark-mode-post-list-item-title-color: $dark-mode-heading-color;
 $dark-mode-post-list-item-title-part-color: $dark-mode-text-color;
 $dark-mode-post-list-item-subtitle-color: $dark-mode-text-color;
 $dark-mode-post-list-item-summary-color: $dark-mode-text-color;
-$dark-mode-post-list-item-meta-color: $dark-mode-text-color;
+$dark-mode-post-list-item-meta-color: $dark-mode-meta-color;
 $dark-mode-post-list-item-divider-color: $dark-mode-divider-color;
 
 .post-list {
@@ -57,8 +60,8 @@ $dark-mode-post-list-item-divider-color: $dark-mode-divider-color;
 
       .post-list-item-title {
         color: $post-list-item-title-color;
-        font-size: $post-list-item-title-mobile-font-size;
-        margin: $post-list-item-inter-part-gap 0;
+        font-size: $mobile-post-list-item-title-font-size;
+        margin: $mobile-post-list-item-internal-gap 0;
 
         @include dark-mode {
           color: $dark-mode-post-list-item-title-color;
@@ -66,10 +69,11 @@ $dark-mode-post-list-item-divider-color: $dark-mode-divider-color;
 
         @include media($md) {
           font-size: $post-list-item-title-font-size;
+          margin: $post-list-item-internal-gap 0;
         }
 
         .post-list-item-title-part {
-          font-size: $post-list-item-title-part-mobile-font-size;
+          font-size: $mobile-post-list-item-title-part-font-size;
           font-style: italic;
           color: $post-list-item-title-part-color;
 
@@ -85,36 +89,46 @@ $dark-mode-post-list-item-divider-color: $dark-mode-divider-color;
 
       .post-list-item-subtitle {
         color: $post-list-item-subtitle-color;
-        font-size: $post-list-item-subtitle-mobile-font-size;
-        margin: $post-list-item-inter-part-gap 0;
+        font-size: $mobile-post-list-item-subtitle-font-size;
+        margin: $mobile-post-list-item-internal-gap 0;
         font-style: italic;
-
+        
         @include dark-mode {
           color: $dark-mode-post-list-item-subtitle-color;
         }
-
+        
         @include media($md) {
           font-size: $post-list-item-subtitle-font-size;
+          margin: $post-list-item-internal-gap 0;
         }
       }
       
       .post-list-item-summary {
         color: $post-list-item-summary-color;
-        font-size: $post-list-item-summary-font-size;
-        margin: $post-list-item-inter-part-gap 0;
-
+        font-size: $mobile-post-list-item-summary-font-size;
+        margin: $mobile-post-list-item-internal-gap 0;
+        
         @include dark-mode {
           color: $dark-mode-post-list-item-summary-color;
+        }
+        
+        @include media($md) {
+          font-size: $post-list-item-summary-font-size;
+          margin: $post-list-item-internal-gap 0;
         }
       }
 
       .post-list-item-meta {
         color: $post-list-item-meta-color;
-        font-size: $post-list-item-meta-font-size;
+        font-size: $mobile-post-list-item-meta-font-size;
         margin: 0;
 
         @include dark-mode {
           color: $dark-mode-post-list-item-meta-color;
+        }
+
+        @include media($md) {
+          font-size: $post-list-item-meta-font-size;
         }
       }
 

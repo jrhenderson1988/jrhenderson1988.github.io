@@ -13,12 +13,12 @@ $dark-mode-page-title-part-color: $dark-mode-text-color;
 
 $page-subtitle-font-size: 1.4rem;
 $page-subtitle-mobile-font-size: 1.3rem;
-$page-subtitle-color: $text-color;
-$dark-mode-page-subtitle-color: $dark-mode-text-color;
+$page-subtitle-color: $heading-color;
+$dark-mode-page-subtitle-color: $dark-mode-heading-color;
 
-$page-meta-font-size: 0.9rem;
-$page-meta-color: $text-color;
-$dark-mode-page-meta-color: $dark-mode-text-color;
+$page-meta-font-size: 0.8rem;
+$page-meta-color: $meta-color;
+$dark-mode-page-meta-color: $dark-mode-meta-color;
 
 $page-content-vertical-spacing: $spacing-unit;
 $page-content-mobile-vertical-spacing: $spacing-unit / 2;
@@ -32,6 +32,7 @@ $page-content-mobile-vertical-spacing: $spacing-unit / 2;
   line-height: 1.1;
   position: relative;
   color: $page-title-color;
+  margin: 0;
 
   @include dark-mode {
     color: $dark-mode-page-title-color;
@@ -77,6 +78,7 @@ $page-content-mobile-vertical-spacing: $spacing-unit / 2;
   font-style: italic;
   font-weight: normal;
   color: $page-subtitle-color;
+  margin: 0.75rem 0 0 0;
 
   @include dark-mode {
     color: $dark-mode-page-subtitle-color;
@@ -90,6 +92,7 @@ $page-content-mobile-vertical-spacing: $spacing-unit / 2;
 .page-meta {
   font-size: $page-meta-font-size;
   color: $page-meta-color;
+  margin: 0.5rem 0 0 0;
 
   @include dark-mode {
     color: $dark-mode-page-meta-color;
