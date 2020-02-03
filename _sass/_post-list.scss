@@ -1,36 +1,3 @@
-
-$post-list-item-gap: $spacing-unit / 2;
-
-$post-list-item-title-font-size: 1.4rem;
-$post-list-item-title-part-font-size: 1.1rem;
-$post-list-item-subtitle-font-size: 1.2rem;
-$post-list-item-summary-font-size: 0.9rem;
-$post-list-item-meta-font-size: 0.8rem;
-$post-list-item-internal-gap: $spacing-unit / 4;
-
-$mobile-post-list-item-title-font-size: 1.3rem;
-$mobile-post-list-item-title-part-font-size: 1rem;
-$mobile-post-list-item-subtitle-font-size: 1.05rem;
-$mobile-post-list-item-summary-font-size: 0.9rem;
-$mobile-post-list-item-meta-font-size: 0.75rem;
-$mobile-post-list-item-internal-gap: $spacing-unit / 4;
-
-$post-list-item-title-color: $heading-color;
-$post-list-item-title-hover-color: $brand-color;
-$post-list-item-title-part-color: $text-color;
-$post-list-item-subtitle-color: $text-color;
-$post-list-item-summary-color: $text-color;
-$post-list-item-meta-color: $meta-color;
-$post-list-item-divider-color: $divider-color;
-$post-list-item-divider-hover-color: $brand-color;
-
-$dark-mode-post-list-item-title-color: $dark-mode-heading-color;
-$dark-mode-post-list-item-title-part-color: $dark-mode-text-color;
-$dark-mode-post-list-item-subtitle-color: $dark-mode-text-color;
-$dark-mode-post-list-item-summary-color: $dark-mode-text-color;
-$dark-mode-post-list-item-meta-color: $dark-mode-meta-color;
-$dark-mode-post-list-item-divider-color: $dark-mode-divider-color;
-
 .post-list {
   margin-left: 0;
   list-style: none;
