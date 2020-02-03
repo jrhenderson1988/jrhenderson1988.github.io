@@ -153,10 +153,10 @@ $content-mobile-horizontal-spacing: $spacing-unit / 2;
 // Get started
 //
 @import
-  "minima/base",
-  "minima/layout",
-  "minima/header",
-  "minima/post-list",
-  "minima/page",
-  "minima/syntax-highlighting"
+  "./base",
+  "./layout",
+  "./header",
+  "./post-list",
+  "./page",
+  "./syntax-highlighting"
 ;
