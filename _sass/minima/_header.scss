@@ -1,7 +1,7 @@
 .site-header {
   display: flex;
   align-items: center;
-  position: $header-mobile-position ;
+  position: $header-mobile-position;
   top: 0;
   left: 0;
   width: 100%;
@@ -213,9 +213,6 @@
       .logo {
         width: $header-logo-size;
         height: $header-logo-size;
-
-        img {
-        }
       }
 
       .identity {

@@ -3,58 +3,102 @@
 
 // Define defaults for each variable.
 
+// ===
+// Base font sizing
+//
 // $base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-$base-font-family:           "Roboto" !default;
-$base-font-size:             16px !default;
-$base-font-weight:           400 !default;
-$small-font-size:            $base-font-size * 0.875 !default;
-$base-line-height:           1.5 !default;
+$base-font-family:              "Roboto" !default;
+$base-font-size:                16px !default;
+$base-font-weight:              400 !default;
+$base-line-height:              1.5 !default;
+$caption-font-size:             $base-font-size * 0.875 !default;
 
-$spacing-unit:               30px !default;
+// ===
+// General spacing
+//
+$spacing-unit:                  30px !default;
 
-$grey-color:                 #828282 !default;
-$grey-color-light:           lighten($grey-color, 40%) !default;
-$grey-color-dark:            darken($grey-color, 25%) !default;
+// ===
+// Base colours
+//
+$heading-color:                 #33383f !default;
+$text-color:                    #555e69 !default;
+$background-color:              #fdfdfd !default;
+$brand-color:                   #10bcf9 !default;
+$divider-color:                 #e8e8e8 !default;
+$offset-background-color:       #efeffa !default;//#eef !default;
+$offset-color:                    lighten($text-color, 10%) !default;
 
-$heading-color:              #33383f !default;
-$text-color:                 #555e69 !default;
-$background-color:           #fdfdfd !default;
-$brand-color:                #10bcf9 !default;
-$divider-color:              $grey-color-light !default;
-$meta-color:                 lighten($text-color, 15%);
-$code-background-color:      #eef;
-$code-text-color:            $text-color;
-$code-divider-color:         $divider-color;
+$dark-mode-heading-color:       #ebe9f1 !default;
+$dark-mode-text-color:          #bbbbbf !default;//#cccccc !default;
+$dark-mode-background-color:    #1e1e21 !default;
+$dark-mode-divider-color:       #2b2b2b !default;//#222225 !default;
+$dark-mode-offset-background-color: lighten($dark-mode-background-color, 2%) !default;
+$dark-mode-offset-color:          #c5c8c6 !default;
 
-$dark-mode-heading-color:    #ebe9f1 !default;
-$dark-mode-text-color:       #bbbbbf !default;//#cccccc !default;
-$dark-mode-background-color: #1e1e21 !default;
-$dark-mode-divider-color:    #2b2b2b !default;//#222225 !default;
-$dark-mode-meta-color:       darken($dark-mode-text-color, 15%) !default;
-$dark-mode-code-background-color: lighten($dark-mode-background-color, 2%) !default;
-$dark-mode-code-color:       #c5c8c6 !default;
-$dark-mode-code-divider-color: $dark-mode-divider-color !default;
+// ===
+// Meta
+//
+$meta-color:                      lighten($text-color, 15%) !default;
+$dark-mode-meta-color:            darken($dark-mode-text-color, 15%) !default;
 
-$table-text-align:           left !default;
+// ===
+// Code/Pre
+//
+$code-background-color:           $offset-background-color !default;
+$code-text-color:                 $offset-color !default;
+$code-divider-color:              $divider-color !default;
 
-// Width of the content area
-$content-width:              780px !default;
+$dark-mode-code-background-color: $dark-mode-offset-background-color !default;
+$dark-mode-code-color:            $dark-mode-offset-color !default;
+$dark-mode-code-divider-color:    $dark-mode-divider-color !default;
 
-$on-palm:                    600px !default;
-$on-laptop:                  800px !default;
+// ===
+// Blockquotes
+//
+$blockquote-text-color:                 lighten($text-color, 20%) !default;
+$blockquote-background-color:           transparent !default;
+$blockquote-tab-color:                  $brand-color !default;
+$blockquote-tab-size:                   4px !default;
+$blockquote-spacer:                     $spacing-unit / 2 !default;
 
+$dark-mode-blockquote-text-color:       darken($dark-mode-text-color, 15%) !default;
+$dark-mode-blockquote-background-color: transparent !default;
+$dark-mode-blockquote-tab-color:        $brand-color !default;
 
-$xs:                         0 !default;
-$sm:                         544px !default;
-$md:                         768px !default;
-$lg:                         992px !default;
-$xl:                         1200px !default;
+// ===
+// Tables
+//
+$table-text-align:                  left !default;
+$table-margin-bottom:               $spacing-unit !default;
+$table-border-color:                $divider-color !default;
+$table-text-color:                  $offset-color !default;
+$table-heading-background-color:    $offset-background-color !default;
+$table-heading-border-color:        $divider-color !default;
+$table-heading-border-bottom-color: $divider-color !default;
+$table-alt-row-background-color:    lighten($table-heading-background-color, 2%) !default;
+$table-cell-border-color:           $table-border-color !default;
+$table-cell-vertical-padding:       $spacing-unit / 3 !default;
+$table-cell-horizontal-padding:     $spacing-unit / 2 !default;
 
-// site-container
-$container-vertical-spacing: $spacing-unit * 2;
-$container-horizontal-spacing: $spacing-unit;
+// ===
+// Content area
+//
+$content-width:                     780px !default;
 
-// site-header
+// ===
+// Breakpoint sizes
+//
+$xs:                                0 !default;
+$sm:                                544px !default;
+$md:                                768px !default;
+$lg:                                992px !default;
+$xl:                                1200px !default;
+$mobile-breakpoint:                 $md !default;
+
+// ===
+// Site header
+//
 $header-background-color: $background-color;
 $header-text-color: $text-color;
 $header-title-color: $heading-color;
@@ -82,12 +126,17 @@ $header-vertical-padding: $spacing-unit * 2;
 $header-width: 300px;
 $header-logo-size: 120px;
 
-// site-content
+// ===
+// Site content
+//
 $content-vertical-spacing: $spacing-unit * 2;
 $content-horizontal-spacing: $spacing-unit;
 $content-mobile-vertical-spacing: $spacing-unit / 2;
 $content-mobile-horizontal-spacing: $spacing-unit / 2;
 
+// ===
+// Mixins
+//
 @mixin media($breakpoint) {
   @media screen and (min-width: $breakpoint) {
     @content;
@@ -100,23 +149,14 @@ $content-mobile-horizontal-spacing: $spacing-unit / 2;
   }
 }
 
-
-// Use media queries like this:
-// @include media-query($on-palm) {
-//   .wrapper {
-//     padding-right: $spacing-unit / 2;
-//     padding-left: $spacing-unit / 2;
-//   }
-// }
-@mixin media-query($device) {
-  @media screen and (max-width: $device) {
-    @content;
-  }
-}
-
-// Import partials.
+// ===
+// Get started
+//
 @import
   "minima/base",
   "minima/layout",
+  "minima/header",
+  "minima/post-list",
+  "minima/page",
   "minima/syntax-highlighting"
 ;

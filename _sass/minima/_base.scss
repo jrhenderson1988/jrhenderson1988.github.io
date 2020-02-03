@@ -81,7 +81,7 @@ figure > img {
 }
 
 figcaption {
-  font-size: $small-font-size;
+  font-size: $caption-font-size;
 }
 
 
@@ -147,15 +147,21 @@ a {
  * Blockquotes
  */
 blockquote {
-  color: $grey-color;
-  border-left: 4px solid $brand-color;
-  padding-left: $spacing-unit / 2;
-  // font-size: 1.125rem;
+  color: $blockquote-text-color;
+  background-color: $blockquote-background-color;
+  border-left: $blockquote-tab-size solid $blockquote-tab-color;
+  padding-left: $blockquote-spacer;
   letter-spacing: -1px;
   font-style: italic;
 
   > :last-child {
     margin-bottom: 0;
+  }
+
+  @include dark-mode {
+    color: $dark-mode-blockquote-text-color;
+    background-color: $dark-mode-blockquote-background-color;
+    border-left-color: $dark-mode-blockquote-tab-color;
   }
 }
 
@@ -227,32 +233,31 @@ pre {
 }
 
 
-
-
 /**
  * Tables
  */
 table {
-  margin-bottom: $spacing-unit;
+  margin-bottom: $table-margin-bottom;
   width: 100%;
   text-align: $table-text-align;
-  color: lighten($text-color, 18%);
+  color: $table-text-color;
   border-collapse: collapse;
-  border: 1px solid $grey-color-light;
+  border: 1px solid $table-border-color;
+
   tr {
     &:nth-child(even) {
-      background-color: lighten($grey-color-light, 6%);
+      background-color: $table-alt-row-background-color;
     }
   }
   th, td {
-    padding: ($spacing-unit / 3) ($spacing-unit / 2);
+    padding: $table-cell-vertical-padding $table-cell-horizontal-padding;
   }
   th {
-    background-color: lighten($grey-color-light, 3%);
-    border: 1px solid darken($grey-color-light, 4%);
-    border-bottom-color: darken($grey-color-light, 12%);
+    background-color: $table-heading-background-color;
+    border: $table-heading-border-color;
+    border-bottom-color: $table-heading-border-bottom-color;
   }
   td {
-    border: 1px solid $grey-color-light;
+    border: 1px solid $table-cell-border-color;
   }
 }
