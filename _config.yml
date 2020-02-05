@@ -33,6 +33,9 @@ social_icons:
   facebook: https://www.facebook.com/jrhenderson1988
 
 show_exerpts: true
+total_recent_posts: 3
+professional_beginning_year: 2011
+beginning_year: 2004
 
 # Build settings
 markdown: kramdown

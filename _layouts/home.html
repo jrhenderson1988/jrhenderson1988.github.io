@@ -1,0 +1,14 @@
+---
+layout: page
+---
+
+{{ content }}
+
+{%- if site.posts.size > 0 and site.total_recent_posts > 0 -%}
+<hr>
+<h2>Recent blog posts</h2>
+{% assign recent_posts = site.posts | slice: 0, site.total_recent_posts %}
+{% include post-list.html posts=recent_posts %}
+
+<p>Read more on my <a href="{{ site.url }}{% link blog.md %}">blog</a>.</p>
+{%- endif -%}
