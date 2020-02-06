@@ -1,6 +1,6 @@
 ---
 layout: page
-menu_title: Contact
+# menu_title: Contact
 title: Contact me
 permalink: /contact
 ---

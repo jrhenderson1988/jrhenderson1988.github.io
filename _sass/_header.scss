@@ -74,11 +74,11 @@
       padding: 0 0 0 $header-mobile-horizontal-padding;
 
       .title {
-        font-size: 1.2rem;
+        font-family: $header-title-font-family;
+        font-size: $header-title-mobile-font-size;
         line-height: 1;
-        letter-spacing: -1px;
+        // letter-spacing: -1px;
         color: $header-title-color;
-        font-weight: bold;
       }
 
       .tagline {
@@ -221,7 +221,7 @@
         text-align: center;
         
         .title {
-          font-size: 1.5rem;
+          font-size: $header-title-font-size;
           line-height: 1.5;
         }
 

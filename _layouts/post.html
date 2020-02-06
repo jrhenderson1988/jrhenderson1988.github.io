@@ -5,8 +5,7 @@ layout: default
 
   <header class="page-header">
     <h1 class="page-title" itemprop="name headline">
-      {{ page.title | escape }}
-      {%- if page.part -%}
+      {{ page.title | escape }} {%- if page.part -%}
       <span class="page-title-part">
         (Part <span itemprop="position">{{ page.part }}</span>)
       </span>

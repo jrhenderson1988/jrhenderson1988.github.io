@@ -106,7 +106,8 @@ li {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: normal;//bold;
+  font-family: $base-heading-font-family;
+  font-weight: normal;
   color: $heading-color;
   line-height: 1.1;
 
@@ -115,14 +116,12 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-h1 { font-size: 2rem; }
-h2 { font-size: 1.5rem; }
-h3 { font-size: 1.17rem; }
-h4 { font-size: 1rem; }
-h5 { font-size: .83rem; }
-h6 { font-size: .67rem; }
-// h1 { font-size: 2.5em; }
-// h2 { font-size: 2.2em; }
+h1 { font-size: $h1-font-size; }
+h2 { font-size: $h2-font-size; }
+h3 { font-size: $h3-font-size; }
+h4 { font-size: $h4-font-size; }
+h5 { font-size: $h5-font-size; }
+h6 { font-size: $h6-font-size; }
 
 
 /**
@@ -188,6 +187,7 @@ hr {
 pre,
 code {
   font-size: 0.9375rem;
+  font-family: $base-code-font-family;
   border: 1px solid $code-divider-color;
   border-radius: 3px;
   background-color: $code-background-color;
@@ -204,6 +204,7 @@ code {
 }
 
 pre {
+  font-family: $base-code-font-family;
   padding: 8px 12px;
   overflow-x: auto;
 

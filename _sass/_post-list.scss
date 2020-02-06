@@ -8,7 +8,6 @@
     .post-list-item-link {
       display: block;
       text-decoration: none;
-      padding-bottom: $post-list-item-gap;
       position: relative;
 
       &::after {
@@ -43,6 +42,12 @@
           font-size: $mobile-post-list-item-title-part-font-size;
           font-style: italic;
           color: $post-list-item-title-part-color;
+          display: inline-block;
+
+          &::before {
+            content: " ";
+            display: inline-block;
+          }
 
           @include dark-mode {
             color: $dark-mode-post-list-item-title-part-color;
@@ -74,6 +79,7 @@
         color: $post-list-item-summary-color;
         font-size: $mobile-post-list-item-summary-font-size;
         margin: $mobile-post-list-item-internal-gap 0;
+        display: none;
         
         @include dark-mode {
           color: $dark-mode-post-list-item-summary-color;
@@ -82,6 +88,7 @@
         @include media($md) {
           font-size: $post-list-item-summary-font-size;
           margin: $post-list-item-internal-gap 0;
+          display: block;
         }
       }
 

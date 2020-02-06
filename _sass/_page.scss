@@ -2,9 +2,10 @@
 }
 
 .page-title {
+  font-family: $base-heading-font-family;
   font-size: $page-title-mobile-font-size;
   letter-spacing: -1px;
-  line-height: 1.1;
+  line-height: 1;
   position: relative;
   color: $page-title-color;
   margin: 0;
@@ -36,6 +37,12 @@
   font-size: $page-title-part-mobile-font-size;
   font-style: italic;
   color: $page-title-part-color;
+  display: inline-block;
+
+  &::before {
+    content: " ";
+    display: inline-block;
+  }
 
   @include dark-mode {
     color: $dark-mode-page-title-part-color;
@@ -47,6 +54,7 @@
 }
 
 .page-subtitle {
+  font-family: $base-heading-font-family;
   font-size: $page-subtitle-mobile-font-size;
   letter-spacing: -1px;
   line-height: 1.1;
