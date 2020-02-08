@@ -1,6 +1,6 @@
 ---
 layout: home
-title: A Newcastle based Software Engineer
+title: A Newcastle based software engineer
 ---
 
 I'm a software engineer and consultant, working as a Senior Developer at [Scott Logic](https://www.scottlogic.com/).

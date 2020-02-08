@@ -25,23 +25,6 @@
     position: fixed;
   }
 
-  &.active {
-    .navigation {
-      left: 0;
-      display: block;
-    }
-
-    .menu-icon {
-      .cross {
-        display: inherit;
-      }
-
-      .veggie-burger {
-        display: none;
-      }
-    }
-  }
-
   .wrapper {
     display: flex;
     justify-content: space-between;
@@ -76,8 +59,9 @@
       .title {
         font-family: $header-title-font-family;
         font-size: $header-title-mobile-font-size;
+        font-weight: 500;
         line-height: 1;
-        // letter-spacing: -1px;
+        letter-spacing: -1px;
         color: $header-title-color;
       }
 
@@ -95,7 +79,7 @@
     width: 100%;
     height: calc(100% - #{$header-mobile-height});
     background: $header-background-color;
-    padding: $header-mobile-vertical-padding $header-mobile-horizontal-padding;
+    padding: 0 $header-mobile-horizontal-padding;
     transition: left .2s ease-in-out;
 
     .main-menu {
@@ -108,11 +92,20 @@
       text-align: center;
       
       li {
-        padding: 0.5em 0;
+        padding: 0;
         border-bottom: 1px solid $header-divider-color;
+
+        a {
+          display: block;
+          padding: 0.5em 0;
+        }
 
         &.active {
           color: $header-navigation-active-color;
+
+          a {
+            color: $header-navigation-active-color;
+          }
         }
 
         a:hover {
@@ -180,6 +173,25 @@
   }
 }
 
+// Mobile active menu mode
+.site-header.active {
+  .navigation {
+    left: 0;
+    display: block;
+  }
+
+  .menu-icon {
+    .cross {
+      display: inherit;
+    }
+
+    .veggie-burger {
+      display: none;
+    }
+  }
+}
+
+// Table/Desktop mode
 @include media($md) {
   .site-header {
     position: fixed;
@@ -286,6 +298,16 @@
           color: $dark-mode-header-link-color;
           fill: $dark-mode-header-link-color;
         }
+      }
+    }
+
+    .menu-icon {
+      color: $dark-mode-header-mobile-menu-icon-color;
+      fill: $dark-mode-header-mobile-menu-icon-color;
+
+      &:hover {
+        color: $dark-mode-header-mobile-menu-icon-hover-color;
+        fill: $dark-mode-header-mobile-menu-icon-hover-color;
       }
     }
 

@@ -1,5 +1,5 @@
 @charset "utf-8";
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i);
 
 // Define defaults for each variable.
 
@@ -111,7 +111,6 @@ $mobile-breakpoint:                             $md !default;
 //
 $header-title-font-family:                      $base-heading-font-family; // TODO
 $header-title-font-size:                        1.5rem;
-$header-title-mobile-font-size:                 1.25rem;
 
 $header-background-color:                       $background-color;
 $header-text-color:                             $text-color;
@@ -122,23 +121,26 @@ $header-logo-box-shadow:                        0 0 3px 3px rgba($brand-color, 0
 $header-navigation-hover-color:                 $brand-color;
 $header-navigation-active-color:                $brand-color;
 
-$dark-mode-header-background-color:             $dark-mode-background-color;
-$dark-mode-header-text-color:                   $dark-mode-text-color;
-$dark-mode-header-title-color:                  $dark-mode-heading-color;
-$dark-mode-header-divider-color:                $dark-mode-divider-color;
-$dark-mode-header-link-color:                   $dark-mode-text-color;
+$header-padding:                                $spacing-unit;
+$header-vertical-padding:                       $spacing-unit * 2;
+$header-width:                                  300px;
+$header-logo-size:                              120px;
 
+$header-title-mobile-font-size:                 1.3rem;
 $header-mobile-position:                        fixed;
 $header-mobile-vertical-padding:                $spacing-unit / 2;
 $header-mobile-horizontal-padding:              $spacing-unit / 2;
 $header-mobile-height:                          50px + ($header-mobile-vertical-padding * 2);
 $header-mobile-menu-icon-color:                 $header-text-color;
-$header-mobile-menu-icon-hover-color:           $header-title-color;
+$header-mobile-menu-icon-hover-color:           $brand-color;
 
-$header-padding:                                $spacing-unit;
-$header-vertical-padding:                       $spacing-unit * 2;
-$header-width:                                  300px;
-$header-logo-size:                              120px;
+$dark-mode-header-background-color:             $dark-mode-background-color;
+$dark-mode-header-text-color:                   $dark-mode-text-color;
+$dark-mode-header-title-color:                  $dark-mode-heading-color;
+$dark-mode-header-divider-color:                $dark-mode-divider-color;
+$dark-mode-header-link-color:                   $dark-mode-text-color;
+$dark-mode-header-mobile-menu-icon-color:       $dark-mode-header-link-color;
+$dark-mode-header-mobile-menu-icon-hover-color: $brand-color;
 
 // ===
 // Site content
@@ -187,7 +189,7 @@ $dark-mode-post-list-item-divider-color:        $dark-mode-divider-color;
 // Page
 //
 $page-title-font-size:                          $h1-font-size;// * 1.1;
-$page-title-mobile-font-size:                   $h1-font-size;// * 0.95;
+$page-title-mobile-font-size:                   $h1-font-size * 0.9;
 $page-title-part-font-size:                     $page-title-font-size * 0.75;
 $page-title-part-mobile-font-size:              $page-title-mobile-font-size * 0.8;
 $page-title-color:                              $heading-color;
@@ -199,8 +201,8 @@ $dark-mode-page-title-divider-color:            $dark-mode-divider-color;
 $dark-mode-page-title-divider-highlight-color:  $brand-color;
 $dark-mode-page-title-part-color:               $dark-mode-text-color;
 
-$page-subtitle-font-size:                       $h2-font-size;// * 0.95;
-$page-subtitle-mobile-font-size:                $h2-font-size;// * 0.9;
+$page-subtitle-font-size:                       $h2-font-size;
+$page-subtitle-mobile-font-size:                $h2-font-size * 0.9;
 $page-subtitle-color:                           $heading-color;
 $dark-mode-page-subtitle-color:                 $dark-mode-heading-color;
 
@@ -209,7 +211,7 @@ $page-meta-color:                               $meta-color;
 $dark-mode-page-meta-color:                     $dark-mode-meta-color;
 
 $page-content-vertical-spacing:                 $spacing-unit;
-$page-content-mobile-vertical-spacing:          $spacing-unit / 2;
+$page-content-mobile-vertical-spacing:          $spacing-unit;
 
 // ===
 // Mixins

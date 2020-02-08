@@ -25,6 +25,27 @@
         </main>
     </div>
 
+  <script type="text/javascript">
+      (function () {
+        var mi = document.getElementById("menu-icon");
+        var sh = document.getElementById("site-header");
+        var target = "active";
+        if (mi && sh) {
+          mi.onclick = function () {
+            var classes = (sh.className || "").split(" ");
+            var targetPos = classes.indexOf("active");
+            classes = targetPos === -1
+              ? classes.concat([target])
+              : classes.filter(function (_, i) {
+                  return i !== targetPos;
+                });
+
+            sh.className = classes.join(" ");
+          };
+        }
+      })();
+  </script>
+
 </body>
 
 </html>
