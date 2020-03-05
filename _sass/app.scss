@@ -1,0 +1,241 @@
+@charset "utf-8";
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i);
+
+// Define defaults for each variable.
+
+// ===
+// Base font sizing
+//
+// $base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$base-font-family:                              "Roboto", Arial, sans-serif !default;
+$base-code-font-family:                         monospace !default;
+$base-heading-font-family:                      "Roboto", Arial, sans-serif !default;
+$base-heading-font-size-multiplier:             0.9;
+$base-font-size:                                16px !default;
+$base-font-weight:                              400 !default;
+$base-line-height:                              1.5 !default;
+
+$caption-font-size:                             $base-font-size * 0.875 !default; // TODO - Remove *
+$h1-font-size:                                  2rem !default;
+$h2-font-size:                                  1.5rem !default;
+$h3-font-size:                                  1.17rem !default;
+$h4-font-size:                                  1rem !default;
+$h5-font-size:                                  .83rem !default;
+$h6-font-size:                                  .67rem !default;
+
+// ===
+// General spacing
+//
+$spacing-unit:                                  30px !default;
+
+// ===
+// Base colours
+//
+$heading-color:                                 #33383f !default;
+$text-color:                                    #555e69 !default;
+$background-color:                              #fdfdfd !default;
+$brand-color:                                   #10bcf9 !default;
+$divider-color:                                 #e8e8e8 !default;
+$offset-background-color:                       #efeffa !default;//#eef !default;
+$offset-color:                                  lighten($text-color, 10%) !default;
+
+$dark-mode-heading-color:                       #ebe9f1 !default;
+$dark-mode-text-color:                          #bbbbbf !default;//#cccccc !default;
+$dark-mode-background-color:                    #1e1e21 !default;
+$dark-mode-divider-color:                       #2b2b2b !default;//#222225 !default;
+$dark-mode-offset-background-color:             lighten($dark-mode-background-color, 2%) !default;
+$dark-mode-offset-color:                        #c5c8c6 !default;
+
+// ===
+// Meta
+//
+$meta-color:                                    lighten($text-color, 15%) !default;
+$dark-mode-meta-color:                          darken($dark-mode-text-color, 15%) !default;
+
+// ===
+// Code/Pre
+//
+$code-background-color:                         $offset-background-color !default;
+$code-text-color:                               $offset-color !default;
+$code-divider-color:                            $divider-color !default;
+
+$dark-mode-code-background-color:               $dark-mode-offset-background-color !default;
+$dark-mode-code-color:                          $dark-mode-offset-color !default;
+$dark-mode-code-divider-color:                  $dark-mode-divider-color !default;
+
+// ===
+// Blockquotes
+//
+$blockquote-text-color:                         lighten($text-color, 20%) !default;
+$blockquote-background-color:                   transparent !default;
+$blockquote-tab-color:                          $brand-color !default;
+$blockquote-tab-size:                           4px !default;
+$blockquote-spacer:                             $spacing-unit / 2 !default;
+
+$dark-mode-blockquote-text-color:               darken($dark-mode-text-color, 15%) !default;
+$dark-mode-blockquote-background-color:         transparent !default;
+$dark-mode-blockquote-tab-color:                $brand-color !default;
+
+// ===
+// Tables
+//
+$table-text-align:                              left !default;
+$table-margin-bottom:                           $spacing-unit !default;
+$table-border-color:                            $divider-color !default;
+$table-text-color:                              $offset-color !default;
+$table-heading-background-color:                $offset-background-color !default;
+$table-heading-border-color:                    $divider-color !default;
+$table-heading-border-bottom-color:             $divider-color !default;
+$table-alt-row-background-color:                lighten($table-heading-background-color, 2%) !default;
+$table-cell-border-color:                       $table-border-color !default;
+$table-cell-vertical-padding:                   $spacing-unit / 3 !default;
+$table-cell-horizontal-padding:                 $spacing-unit / 2 !default;
+
+// ===
+// Content area
+//
+$content-width:                                 750px !default;
+
+// ===
+// Breakpoint sizes
+//
+$xs:                                            0 !default;
+$sm:                                            544px !default;
+$md:                                            768px !default;
+$lg:                                            992px !default;
+$xl:                                            1200px !default;
+$mobile-breakpoint:                             $md !default;
+
+// ===
+// Site header
+//
+$header-title-font-family:                      $base-heading-font-family; // TODO
+$header-title-font-size:                        1.5rem;
+
+$header-background-color:                       $background-color;
+$header-text-color:                             $text-color;
+$header-title-color:                            $heading-color;
+$header-link-color:                             $text-color;
+$header-divider-color:                          $divider-color;
+$header-logo-box-shadow:                        0 0 3px 3px rgba($brand-color, 0.3);
+$header-navigation-hover-color:                 $brand-color;
+$header-navigation-active-color:                $brand-color;
+
+$header-padding:                                $spacing-unit;
+$header-vertical-padding:                       $spacing-unit * 2;
+$header-width:                                  300px;
+$header-logo-size:                              120px;
+
+$header-title-mobile-font-size:                 1.3rem;
+$header-mobile-position:                        fixed;
+$header-mobile-vertical-padding:                $spacing-unit / 2;
+$header-mobile-horizontal-padding:              $spacing-unit / 2;
+$header-mobile-height:                          50px + ($header-mobile-vertical-padding * 2);
+$header-mobile-menu-icon-color:                 $header-text-color;
+$header-mobile-menu-icon-hover-color:           $brand-color;
+
+$dark-mode-header-background-color:             $dark-mode-background-color;
+$dark-mode-header-text-color:                   $dark-mode-text-color;
+$dark-mode-header-title-color:                  $dark-mode-heading-color;
+$dark-mode-header-divider-color:                $dark-mode-divider-color;
+$dark-mode-header-link-color:                   $dark-mode-text-color;
+$dark-mode-header-mobile-menu-icon-color:       $dark-mode-header-link-color;
+$dark-mode-header-mobile-menu-icon-hover-color: $brand-color;
+
+// ===
+// Site content
+//
+$content-vertical-spacing:                      $spacing-unit * 2;
+$content-horizontal-spacing:                    $spacing-unit;
+$content-mobile-vertical-spacing:               $spacing-unit / 2;
+$content-mobile-horizontal-spacing:             $spacing-unit / 2;
+
+// ===
+// Post list
+//
+$post-list-item-gap:                            $spacing-unit / 2;
+
+$post-list-item-title-font-size:                1.25rem;
+$post-list-item-title-part-font-size:           1rem;
+$post-list-item-subtitle-font-size:             1.1rem;
+$post-list-item-summary-font-size:              1rem;
+$post-list-item-meta-font-size:                 0.8rem;
+$post-list-item-internal-gap:                   $spacing-unit / 4;
+
+$mobile-post-list-item-title-font-size:         1.2rem;
+$mobile-post-list-item-title-part-font-size:    0.95rem;
+$mobile-post-list-item-subtitle-font-size:      1rem;
+$mobile-post-list-item-summary-font-size:       1rem;
+$mobile-post-list-item-meta-font-size:          0.75rem;
+$mobile-post-list-item-internal-gap:            $spacing-unit / 4;
+
+$post-list-item-title-color:                    $heading-color;
+$post-list-item-title-hover-color:              $brand-color;
+$post-list-item-title-part-color:               $text-color;
+$post-list-item-subtitle-color:                 $text-color;
+$post-list-item-summary-color:                  $text-color;
+$post-list-item-meta-color:                     $meta-color;
+$post-list-item-divider-color:                  $divider-color;
+$post-list-item-divider-hover-color:            $brand-color;
+
+$dark-mode-post-list-item-title-color:          $dark-mode-heading-color;
+$dark-mode-post-list-item-title-part-color:     $dark-mode-text-color;
+$dark-mode-post-list-item-subtitle-color:       $dark-mode-text-color;
+$dark-mode-post-list-item-summary-color:        $dark-mode-text-color;
+$dark-mode-post-list-item-meta-color:           $dark-mode-meta-color;
+$dark-mode-post-list-item-divider-color:        $dark-mode-divider-color;
+
+// ===
+// Page
+//
+$page-title-font-size:                          $h1-font-size;// * 1.1;
+$page-title-mobile-font-size:                   $h1-font-size * 0.9;
+$page-title-part-font-size:                     $page-title-font-size * 0.75;
+$page-title-part-mobile-font-size:              $page-title-mobile-font-size * 0.8;
+$page-title-color:                              $heading-color;
+$page-title-part-color:                         $text-color;
+$page-title-divider-color:                      $divider-color;
+$page-title-divider-highlight-color:            $brand-color;
+$dark-mode-page-title-color:                    $dark-mode-heading-color;
+$dark-mode-page-title-divider-color:            $dark-mode-divider-color;
+$dark-mode-page-title-divider-highlight-color:  $brand-color;
+$dark-mode-page-title-part-color:               $dark-mode-text-color;
+
+$page-subtitle-font-size:                       $h2-font-size;
+$page-subtitle-mobile-font-size:                $h2-font-size * 0.9;
+$page-subtitle-color:                           $heading-color;
+$dark-mode-page-subtitle-color:                 $dark-mode-heading-color;
+
+$page-meta-font-size:                           0.8rem;
+$page-meta-color:                               $meta-color;
+$dark-mode-page-meta-color:                     $dark-mode-meta-color;
+
+$page-content-vertical-spacing:                 $spacing-unit;
+$page-content-mobile-vertical-spacing:          $spacing-unit;
+
+// ===
+// Mixins
+//
+@mixin media($breakpoint) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin dark-mode() {
+  @media (prefers-color-scheme: dark) {
+    @content;
+  }
+}
+
+// ===
+// Get started
+//
+@import
+  "./base",
+  "./layout",
+  "./header",
+  "./post-list",
+  "./page",
+  "./syntax-highlighting"
+;

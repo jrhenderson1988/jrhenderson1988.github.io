@@ -1,27 +1,55 @@
 ---
 layout: default
 ---
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="page" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta">
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        {{ page.date | date: date_format }}
-      </time>
-      {%- if page.author -%}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
-      {%- endif -%}</p>
+  <header class="page-header">
+    <h1 class="page-title" itemprop="name headline">
+      {{ page.title | escape }} {%- if page.part -%}
+      <span class="page-title-part">
+        (Part <span itemprop="position">{{ page.part }}</span>)
+      </span>
+      {%- endif -%}
+    </h1>
+    {%- if page.subtitle -%}
+    <h2 class="page-subtitle">{{ page.subtitle }}</h2>
+    {%- endif -%}
+    <p class="page-meta">
+      {% include reading-time.html post=page %}
+      &mdash;
+      <span class="post-date" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {{ page.date | date_to_string: "ordinal" }}
+      </span>
+      &mdash;
+      <span class="post-author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">
+          {%- if page.author -%}
+          {{ page.author }}
+          {%- else -%}
+          {{ site.default_author }}
+          {%- endif -%}
+        </span>
+      </span>
+      {%- if page.originally_posted.at -%}
+      &mdash;
+      Originally posted
+      <a href="{{ page.originally_posted.at }}" target="_blank" rel="nofollow">
+        {%- if page.originally_posted.text-%}
+        {{ page.originally_posted.text }}
+        {%- else -%}
+        here
+        {%- endif -%}
+      </a>
+      {%- endif -%}
+    </p>
+
   </header>
 
-  <div class="post-content e-content" itemprop="articleBody">
+  <div class="page-content" itemprop="articleBody">
     {{ content }}
   </div>
 
   {%- if site.disqus.shortname -%}
-    {%- include disqus_comments.html -%}
+  {%- include disqus_comments.html -%}
   {%- endif -%}
-
-  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>

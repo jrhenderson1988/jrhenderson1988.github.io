@@ -14,19 +14,34 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Jonathon Henderson
+tagline: Software Engineer
 email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "/" # the subpath of your site, e.g. /blog
-url: "http://jrhenderson1988.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-github_username:  jrhenderson1988
+description: >-
+  A software engineer and consultant based near Newcastle upon Tyne with a passion for
+  backend development using Kotlin, Java, Python, Kotlin and Go.
+url: https://jrhenderson1988.github.io # the base hostname & protocol for your site, e.g. http://example.com
+default_author: Jonathon
+
+social_icons:
+  github: https://github.com/jrhenderson1988
+  linkedin: https://www.linkedin.com/in/jrhenderson1988
+  twitter: https://www.twitter.com/jrhenderson1988
+  stackoverflow: https://stackoverflow.com/users/2244675/jonathon
+  facebook: https://www.facebook.com/jrhenderson1988
+
+show_exerpts: true
+total_recent_posts: 3
+professional_beginning_year: 2011
+beginning_year: 2004
+google_analytics: UA-49672930-1
+
 
 # Build settings
 markdown: kramdown
-plugins:
-  - jekyll-feed
+# plugins:
+#   - jekyll-feed
+
+permalink: /:categories/:year/:month/:day/:title
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

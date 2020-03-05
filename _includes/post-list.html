@@ -1,0 +1,33 @@
+{%- if include.posts.size > 0 -%}
+<ul class="post-list">
+  {%- for post in include.posts -%}
+  <li class="post-list-item">
+    <a href="{{ site.url }}{{ post.url }}" class="post-list-item-link">
+      <h2 class="post-list-item-title">
+        {{ post.title | escape }}
+        {%- if post.part -%}
+        &nbsp;<span class="post-list-item-title-part">(Part {{ post.part }})</span>
+        {%- endif -%}
+      </h2>
+      {%- if post.subtitle -%}
+      <h3 class="post-list-item-subtitle">{{ post.subtitle }}</h3>
+      {%- endif -%}
+      <p class="post-list-item-summary">{{ post.summary | escape }}</p>
+      <p class="post-list-item-meta">
+        <span class="post-list-item-reading-time">{% include reading-time.html post=post %}</span>
+        &mdash;
+        <span class="post-list-item-date">{{ post.date | date_to_string: "ordinal" }}</span>
+        &mdash;
+        <span class="post-list-item-author">
+          {%- if post.author -%}
+          {{ post.author }}
+          {%- else -%}
+          {{ site.default_author }}
+          {%- endif -%}
+        </span>
+      </p>
+    </a>
+  </li>
+  {%- endfor -%}
+</ul>
+{%- endif -%}
