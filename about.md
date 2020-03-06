@@ -20,7 +20,7 @@ I've been developing software professionally for about {{ pro }} years ({{ total
 
 Over the course of my career I've used many languages and technologies, but I find that my passion lies within Kotlin, Java, Python and Go as well as Spring Boot and the JVM ecosystem as a whole. A lot of my free time is spent working on side projects, watching tech-talks and learning learn new languages and technologies; I currently find myself trying to pick up Rust and Scala.
 
-I've has the chance to work on some interesting projects throughout my career. From travel agency websites and marketing intelligence applications to a car-sharing SaaS project and financial trading platforms.
+I've had the chance to work on some interesting projects throughout my career. From travel agency websites and marketing intelligence applications to a car-sharing SaaS project and financial trading platforms.
 
 When I'm not being a nerd, you can find me gaming, listening to music (Rock, Metal & ABBA), playing guitar and socialising. I love to travel and learn about other countries, cultures and languages; I particularly love Scandinavia. I lived in northern Sweden for a short period of time and speak Swedish more or less fluently. I'm also interested in aviation and my dream is to get my pilot's license.
 
