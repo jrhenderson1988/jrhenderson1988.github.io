@@ -7,12 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {%- seo -%}
     <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+    {%- feed_meta -%}
     {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include google-analytics.html -%}
     {%- endif -%}
 </head>
 
-<body>
+<body class="">
 
     <div class="site-container">
         {%- include header.html -%}
@@ -24,22 +25,43 @@
         </main>
     </div>
 
+    <span class="dark-mode-toggle" id="dark-mode-toggle">
+      <span class="moon">
+        {%- include icon-moon.html -%}
+      </span>
+      <span class="lightbulb">
+        {%- include icon-lightbulb.html -%}
+      </span>
+    </span>
+
   <script type="text/javascript">
+    function toggleClass(className, toToggle) {
+      var classes = (className || "").split(" ");
+      var targetPos = classes.indexOf(toToggle);
+      classes = targetPos === -1
+        ? classes.concat([toToggle])
+        : classes.filter(function (_, i) {
+          return i !== targetPos;
+        });
+
+      return classes.join(" ");
+    }
+
       (function () {
         var mi = document.getElementById("menu-icon");
         var sh = document.getElementById("site-header");
         var target = "active";
         if (mi && sh) {
           mi.onclick = function () {
-            var classes = (sh.className || "").split(" ");
-            var targetPos = classes.indexOf("active");
-            classes = targetPos === -1
-              ? classes.concat([target])
-              : classes.filter(function (_, i) {
-                  return i !== targetPos;
-                });
+            sh.className = toggleClass(sh.className, "active");
+          };
+        }
 
-            sh.className = classes.join(" ");
+        var dmt = document.getElementById("dark-mode-toggle");
+        var b = document.body;
+        if (dmt && b) {
+          dmt.onclick = function () {
+            b.className = toggleClass(b.className, "dark-mode");
           };
         }
       })();

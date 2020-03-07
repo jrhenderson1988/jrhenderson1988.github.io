@@ -222,12 +222,6 @@ $page-content-mobile-vertical-spacing:          $spacing-unit;
   }
 }
 
-@mixin dark-mode() {
-  @media (prefers-color-scheme: dark) {
-    @content;
-  }
-}
-
 // ===
 // Get started
 //
@@ -237,5 +231,7 @@ $page-content-mobile-vertical-spacing:          $spacing-unit;
   "./header",
   "./post-list",
   "./page",
-  "./syntax-highlighting"
+  "./components",
+  "./syntax-highlighting",
+  "./dark-mode"
 ;

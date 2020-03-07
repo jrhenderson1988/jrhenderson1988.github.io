@@ -33,11 +33,6 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-
-  @include dark-mode {
-    background-color: $dark-mode-background-color;
-    color: $dark-mode-text-color;
-  }
 }
 
 
@@ -111,10 +106,6 @@ h1, h2, h3, h4, h5, h6 {
   color: $heading-color;
   line-height: 1.1;
   margin: 1em 0 0.5em 0;
-
-  @include dark-mode {
-    color: $dark-mode-heading-color;
-  }
 }
 
 h1 { font-size: $h1-font-size; }
@@ -157,12 +148,6 @@ blockquote {
   > :last-child {
     margin-bottom: 0;
   }
-
-  @include dark-mode {
-    color: $dark-mode-blockquote-text-color;
-    background-color: $dark-mode-blockquote-background-color;
-    border-left-color: $dark-mode-blockquote-tab-color;
-  }
 }
 
 
@@ -171,10 +156,6 @@ hr {
   height: 1px;
   background-color: $divider-color;
   margin: ($spacing-unit / 2) 0;
-
-  @include dark-mode {
-    background-color: $dark-mode-divider-color;
-  }
 
   @include media($md) {
     margin: $spacing-unit 0;
@@ -192,12 +173,6 @@ code {
   border: 1px solid $code-divider-color;
   border-radius: 3px;
   background-color: $code-background-color;
-
-  @include dark-mode {
-    border-color: $dark-mode-code-divider-color;
-    background-color: $dark-mode-code-background-color;
-    color: $dark-mode-code-color;
-  }
 }
 
 code {
