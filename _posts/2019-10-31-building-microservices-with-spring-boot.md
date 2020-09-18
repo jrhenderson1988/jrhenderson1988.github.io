@@ -188,7 +188,7 @@ A microservice architecture can be incredibly dynamic. Services don't necessaril
 
 [Netflix's Eureka](https://github.com/Netflix/eureka) is a service discovery tool, designed to solve this problem. When a service starts up, it registers itself with Eureka, specifying its name, address and other relevant information. It regularly sends heartbeat messages to Eureka to communicate that it's still alive and able to handle requests. If that heartbeat stops for any reason, Eureka will de-register that particular service after a configured timeout. Services can also request registry information from Eureka in order to discover other services.
 
-![Eureka Diagram]({{ site.url }}{% link /assets/2019-10-31-building-microservices-with-spring-boot/eureka-diagram.jpg %} "Eureka Diagram")
+![Eureka Diagram]({{ site.url }}{% link /assets/building-microservices-with-spring-boot/eureka-diagram.jpg %} "Eureka Diagram")
 
 ## Discovery Service
 
@@ -223,7 +223,7 @@ eureka.client.serviceUrl.defaultZone=http://${eureka.instance.hostname}:${server
 
 Build and run the service (`./gradlew bootRun`) and confirm that it works by visiting [http://localhost:3000](http://localhost:3000). You should see a Eureka dashboard which displays information about the running instance:
 
-![Eureka Dashboard]({{ site.url }}{% link /assets/2019-10-31-building-microservices-with-spring-boot/eureka-dashboard.png %} "Eureka Dashboard")
+![Eureka Dashboard]({{ site.url }}{% link /assets/building-microservices-with-spring-boot/eureka-dashboard.png %} "Eureka Dashboard")
 
 ### Registering with the Discovery Service
 
@@ -294,7 +294,7 @@ eureka.client.serviceUrl.defaultZone=http://localhost:3000/eureka/
 
 Spin up your `discovery-service`, followed by the `customer-service` and `order-service` applications, then open the Discovery Service's [Eureka Dashboard](http://localhost:3000) - you should see that both services have been registered.
 
-![Registered with Eureka]({{ site.url }}{% link /assets/2019-10-31-building-microservices-with-spring-boot/instances-registered-with-eureka.png %} "Registered with Eureka")
+![Registered with Eureka]({{ site.url }}{% link /assets/building-microservices-with-spring-boot/instances-registered-with-eureka.png %} "Registered with Eureka")
 
 ## Routing and Server-Side Load Balancing with Zuul
 
@@ -304,7 +304,7 @@ In a microservice architecture there can be tens, hundreds or even thousands of 
 
 Zuul also supports *filters* which allows developers to intercept requests before they are sent to services (Pre-filters) and responses before being sent back to clients (Post-filters). This enables developers to implement functionality that is common to all services, running either before or after requests are handled. Filters are often used for features such as authentication, load shedding and CORS management, to name just a few.
 
-![Zuul Diagram]({{ site.url }}{% link /assets/2019-10-31-building-microservices-with-spring-boot/zuul-diagram.jpg %} "Zuul Diagram")
+![Zuul Diagram]({{ site.url }}{% link /assets/building-microservices-with-spring-boot/zuul-diagram.jpg %} "Zuul Diagram")
 
 ## Gateway Service
 

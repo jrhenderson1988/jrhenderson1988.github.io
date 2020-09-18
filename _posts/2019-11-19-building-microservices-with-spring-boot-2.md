@@ -212,7 +212,7 @@ $ ./gradlew bootRun --args='--server.port=<port>'
 
 Wait a couple of minutes for everything to register with the Discovery Service and for the updated registries to be propagated. Take a look at the [Eureka dashboard](http://localhost:3000) - under *Instances currently registered with Eureka* you should see multiple instances of the Order Service:
 
-![Instances Registered with Eureka]({{ site.url }}{% link /assets/2019-11-19-building-microservices-with-spring-boot-2/instances-registered-with-eureka.jpg %} "Instances Registered with Eureka")
+![Instances Registered with Eureka]({{ site.url }}{% link /assets/building-microservices-with-spring-boot-2/instances-registered-with-eureka.jpg %} "Instances Registered with Eureka")
 
 Make a few `GET` requests to [http://localhost/customers/2/orders](http://localhost/customers/2/orders) and take note of the `port` in the response. It should change each time.
 
@@ -232,7 +232,7 @@ Distributed architectures depend on the ability of many interconnected services 
 
 Calls to external systems are wrapped in [commands](http://en.wikipedia.org/wiki/Command_pattern), which are typically run in separate threads. Hystrix oversees execution, timing out calls that run over configured thresholds and detects errors/exceptions. Failure rates are monitored and when a defined limit is exceeded, a circuit-breaker is tripped, halting the flow of traffic to allow the overwhelmed or failing service an opportunity to recover.
 
-![Hystrix Diagram]({{ site.url }}{% link /assets/2019-11-19-building-microservices-with-spring-boot-2/hystrix-diagram.svg %} "Hystrix Diagram")
+![Hystrix Diagram]({{ site.url }}{% link /assets/building-microservices-with-spring-boot-2/hystrix-diagram.svg %} "Hystrix Diagram")
 
 Feign also includes support for Hystrix although it is not enabled by default. When Hystrix is on the classpath and explicitly enabled in the configuration, Spring Cloud OpenFeign automatically configures and integrates it with Feign clients.
 
