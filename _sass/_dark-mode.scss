@@ -127,6 +127,31 @@ body.dark-mode {
     }
   }
 
+// $dark-mode-table-border-color:                  $dark-mode-divider-color !default;
+// $dark-mode-table-text-color:                    $dark-mode-offset-color !default;
+// $dark-mode-table-heading-background-color:      $dark-mode-offset-background-color !default;
+// $dark-mode-table-heading-border-color:          $dark-mode-table-border-color !default;
+// $dark-mode-table-heading-border-bottom-color:   $dark-mode-table-border-color !default;
+// $dark-mode-table-alt-row-background-color:      darken($dark-mode-table-heading-background-color, 2%) !default;
+// $dark-mode-table-cell-border-color:             $dark-mode-table-border-color !default;
+  table {
+    color: $dark-mode-table-text-color;
+    border-color: $dark-mode-table-border-color;
+
+    tr {
+      &:nth-child(even) {
+        background-color: $dark-mode-table-alt-row-background-color;
+      }
+    }
+    th {
+      background-color: $dark-mode-table-heading-background-color;
+      border: $dark-mode-table-heading-border-color;
+      border-bottom-color: $dark-mode-table-heading-border-bottom-color;
+    }
+    td {
+      border-color: $dark-mode-table-cell-border-color;
+    }
+  }
 
   .highlight {
     background: $dark-mode-code-background-color;

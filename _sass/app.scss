@@ -91,6 +91,14 @@ $table-cell-border-color:                       $table-border-color !default;
 $table-cell-vertical-padding:                   $spacing-unit / 3 !default;
 $table-cell-horizontal-padding:                 $spacing-unit / 2 !default;
 
+$dark-mode-table-border-color:                  $dark-mode-divider-color !default;
+$dark-mode-table-text-color:                    $dark-mode-offset-color !default;
+$dark-mode-table-heading-background-color:      $dark-mode-offset-background-color !default;
+$dark-mode-table-heading-border-color:          $dark-mode-table-border-color !default;
+$dark-mode-table-heading-border-bottom-color:   $dark-mode-table-border-color !default;
+$dark-mode-table-alt-row-background-color:      $dark-mode-table-heading-background-color !default;
+$dark-mode-table-cell-border-color:             $dark-mode-table-border-color !default;
+
 // ===
 // Content area
 //
