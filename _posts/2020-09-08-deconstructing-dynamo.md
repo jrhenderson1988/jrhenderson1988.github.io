@@ -63,7 +63,7 @@ Any hashing algorithm could theoretically be used. However, Dynamo opts to use M
 
 Hashing `"foo"` and `"bar"`, we get positions `96` and `50`, respectively, which correspond to node *E* for `"foo"` and *C* for `"bar"`.
 
-![Consistent Hashing]({{ site.url }}{% link /assets/deconstructing-dynamo/consistent-hashing.png %} "Consistent Hashing")
+![Consistent Hashing]({% link /assets/deconstructing-dynamo/consistent-hashing.png %} "Consistent Hashing")
 
 ### Replication
 
@@ -71,7 +71,7 @@ When scaling a relational database it is common to replicate the entire dataset 
 
 During a write, the object will be replicated to *N-1* nodes clockwise from the selected node, where *N* is a configurable replication factor. In the previous example, given an *N* value of *3*, the data identified by the key `"foo"` which is written to node *E*, would be replicated to nodes *A* and *B*. Similarly, the data identified by the key `"bar"` which was written to node *C*, would be replicated to nodes *D* and *E*.
 
-![Replication]({{ site.url }}{% link /assets/deconstructing-dynamo/replication.png %} "Replication")
+![Replication]({% link /assets/deconstructing-dynamo/replication.png %} "Replication")
 
 ## Reading and Writing
 
@@ -196,7 +196,7 @@ Now we construct a parent of *A* and *B* by concatenating the hash of *A* and th
 
 Finally, we get to the root of the tree by concatenating *AB* with *CD* and then hashing the result: `b09649f6104fd73b8f7ca2e544111d49`
 
-![MerkleTree]({{ site.url }}{% link /assets/deconstructing-dynamo/merkle-tree-1.png %} "Merkle Tree")
+![MerkleTree]({% link /assets/deconstructing-dynamo/merkle-tree-1.png %} "Merkle Tree")
 
 Let's say that the Merkle Tree shown above is maintained by node *A* and we're comparing it with node *B*. Node *A* might request node *B*'s root hash and upon receiving it, compares it to its own. If the hashes match, we can be sure that both nodes contain the same data.
 
