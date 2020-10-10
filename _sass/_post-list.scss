@@ -75,7 +75,7 @@
       .post-list-item-meta {
         color: $post-list-item-meta-color;
         font-size: $mobile-post-list-item-meta-font-size;
-        margin: 0;
+        margin: 0.75rem 0 0 0;
 
         @include media($md) {
           font-size: $post-list-item-meta-font-size;

@@ -14,10 +14,6 @@
       {%- endif -%}
       <p class="post-list-item-summary">{{ post.summary | escape }}</p>
       <p class="post-list-item-meta">
-        <span class="post-list-item-reading-time">{% include reading-time.html post=post %}</span>
-        &mdash;
-        <span class="post-list-item-date">{{ post.date | date_to_string: "ordinal" }}</span>
-        &mdash;
         <span class="post-list-item-author">
           {%- if post.author -%}
           {{ post.author }}
@@ -25,6 +21,10 @@
           {{ site.default_author }}
           {%- endif -%}
         </span>
+        &mdash;
+        <span class="post-list-item-reading-time">{% include reading-time.html post=post %}</span>
+        &mdash;
+        <span class="post-list-item-date">{{ post.date | date_to_string: "ordinal" }}</span>
       </p>
     </a>
   </li>
