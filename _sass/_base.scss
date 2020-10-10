@@ -120,15 +120,11 @@ h6 { font-size: $h6-font-size; }
  * Links
  */
 a {
-  color: $brand-color;
+  color: $link-color;
   text-decoration: none;
 
-  &:visited {
-    color: darken($brand-color, 15%);
-  }
-
   &:hover {
-    color: $text-color;
+    color: $link-hover-color;
     text-decoration: underline;
   }
 }

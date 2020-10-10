@@ -34,10 +34,13 @@ $spacing-unit:                                  30px !default;
 $heading-color:                                 #33383f !default;
 $text-color:                                    #555e69 !default;
 $background-color:                              #fdfdfd !default;
-$brand-color:                                   #10bcf9 !default;
+// $brand-color:                                   #10bcf9 !default;
+$brand-color:                                   #ea791f !default;
 $divider-color:                                 #e8e8e8 !default;
 $offset-background-color:                       #efeffa !default;//#eef !default;
 $offset-color:                                  lighten($text-color, 10%) !default;
+$link-color:                                    $brand-color !default;
+$link-hover-color:                              $brand-color !default;
 
 $dark-mode-heading-color:                       #ebe9f1 !default;
 $dark-mode-text-color:                          #bbbbbf !default;//#cccccc !default;
@@ -177,7 +180,7 @@ $mobile-post-list-item-summary-font-size:       1rem;
 $mobile-post-list-item-meta-font-size:          0.75rem;
 $mobile-post-list-item-internal-gap:            $spacing-unit / 4;
 
-$post-list-item-title-color:                    $heading-color;
+$post-list-item-title-color:                    $brand-color;
 $post-list-item-title-hover-color:              $brand-color;
 $post-list-item-title-part-color:               $text-color;
 $post-list-item-subtitle-color:                 $text-color;
@@ -186,7 +189,7 @@ $post-list-item-meta-color:                     $meta-color;
 $post-list-item-divider-color:                  $divider-color;
 $post-list-item-divider-hover-color:            $brand-color;
 
-$dark-mode-post-list-item-title-color:          $dark-mode-heading-color;
+$dark-mode-post-list-item-title-color:          $brand-color;
 $dark-mode-post-list-item-title-part-color:     $dark-mode-text-color;
 $dark-mode-post-list-item-subtitle-color:       $dark-mode-text-color;
 $dark-mode-post-list-item-summary-color:        $dark-mode-text-color;
