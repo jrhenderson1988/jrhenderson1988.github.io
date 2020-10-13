@@ -1,5 +1,4 @@
 ---
-author: jhenderson
 title: "Let's Build Snake with Rust"
 summary: "Learn Rust, the tech industry's most loved programming language by building Snake, the simple but addictive game found preloaded on old Nokia mobile phones."
 originally_posted:
