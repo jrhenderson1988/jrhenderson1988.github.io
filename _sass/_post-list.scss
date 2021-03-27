@@ -23,16 +23,18 @@
       .post-list-item-title {
         color: $post-list-item-title-color;
         font-size: $mobile-post-list-item-title-font-size;
-        margin: $mobile-post-list-item-internal-gap 0;
+        margin: $mobile-post-list-item-internal-gap 0 0 0;
+        font-weight: 500;
 
         @include media($md) {
           font-size: $post-list-item-title-font-size;
-          margin: $post-list-item-internal-gap 0;
+          margin: $post-list-item-internal-gap 0 0 0;
         }
 
         .post-list-item-title-part {
           font-size: $mobile-post-list-item-title-part-font-size;
           font-style: italic;
+          font-weight: 400;
           color: $post-list-item-title-part-color;
           display: inline-block;
 
@@ -50,12 +52,13 @@
       .post-list-item-subtitle {
         color: $post-list-item-subtitle-color;
         font-size: $mobile-post-list-item-subtitle-font-size;
-        margin: $mobile-post-list-item-internal-gap 0;
+        font-weight: 400;
+        margin: ($mobile-post-list-item-internal-gap / 2) 0 0 0;
         font-style: italic;
         
         @include media($md) {
           font-size: $post-list-item-subtitle-font-size;
-          margin: $post-list-item-internal-gap 0;
+          margin: ($post-list-item-internal-gap / 2) 0 0 0;
         }
       }
       
@@ -75,7 +78,7 @@
       .post-list-item-meta {
         color: $post-list-item-meta-color;
         font-size: $mobile-post-list-item-meta-font-size;
-        margin: 0.75rem 0 0 0;
+        margin: $mobile-post-list-item-internal-gap 0 0 0;
 
         @include media($md) {
           font-size: $post-list-item-meta-font-size;

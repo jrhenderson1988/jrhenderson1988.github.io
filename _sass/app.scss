@@ -1,5 +1,6 @@
 @charset "utf-8";
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i);
+//@import url(https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i);
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 // Define defaults for each variable.
 
@@ -7,13 +8,15 @@
 // Base font sizing
 //
 // $base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-$base-font-family:                              "Roboto", Arial, sans-serif !default;
+// $base-font-family:                              "Roboto", Arial, sans-serif !default;
+$base-font-family:                              "Fira Sans", Arial, sans-serif !default;
 $base-code-font-family:                         monospace !default;
-$base-heading-font-family:                      "Roboto", Arial, sans-serif !default;
+// $base-heading-font-family:                      "Roboto", Arial, sans-serif !default;
+$base-heading-font-family:                      "Fira Sans", Arial, sans-serif !default;
 $base-heading-font-size-multiplier:             0.9;
 $base-font-size:                                16px !default;
 $base-font-weight:                              400 !default;
-$base-line-height:                              1.5 !default;
+$base-line-height:                              1.6 !default;
 
 $caption-font-size:                             $base-font-size * 0.875 !default; // TODO - Remove *
 $h1-font-size:                                  2rem !default;
@@ -26,15 +29,19 @@ $h6-font-size:                                  .67rem !default;
 // ===
 // General spacing
 //
-$spacing-unit:                                  30px !default;
+$spacing-unit:                                  40px !default;
 
 // ===
 // Base colours
 //
-$heading-color:                                 #33383f !default;
-$text-color:                                    #555e69 !default;
+// $heading-color:                                 #33383f !default;
+$heading-color:                                 #000000 !default;
+$subheading-color:                              #555555 !default;
+// $text-color:                                    #555e69 !default;
+$text-color:                                    #000000 !default;
 $background-color:                              #fdfdfd !default;
-$brand-color:                                   #10bcf9 !default;
+// $brand-color:                                   #10bcf9 !default;
+$brand-color:                                   #ec6313 !default;
 $divider-color:                                 #e8e8e8 !default;
 $offset-background-color:                       #efeffa !default;//#eef !default;
 $offset-color:                                  lighten($text-color, 10%) !default;
@@ -104,7 +111,7 @@ $dark-mode-table-cell-border-color:             $dark-mode-table-border-color !d
 // ===
 // Content area
 //
-$content-width:                                 750px !default;
+$content-width:                                 840px !default;
 
 // ===
 // Breakpoint sizes
@@ -120,7 +127,7 @@ $mobile-breakpoint:                             $md !default;
 // Site header
 //
 $header-title-font-family:                      $base-heading-font-family; // TODO
-$header-title-font-size:                        1.5rem;
+$header-title-font-size:                        1.7rem;
 
 $header-background-color:                       $background-color;
 $header-text-color:                             $text-color;
@@ -133,7 +140,7 @@ $header-navigation-active-color:                $brand-color;
 
 $header-padding:                                $spacing-unit;
 $header-vertical-padding:                       $spacing-unit * 2;
-$header-width:                                  300px;
+$header-width:                                  360px;
 $header-logo-size:                              120px;
 
 $header-title-mobile-font-size:                 1.3rem;
@@ -165,7 +172,7 @@ $content-mobile-horizontal-spacing:             $spacing-unit / 2;
 //
 $post-list-item-gap:                            $spacing-unit / 2;
 
-$post-list-item-title-font-size:                1.25rem;
+$post-list-item-title-font-size:                1.5rem;
 $post-list-item-title-part-font-size:           1rem;
 $post-list-item-subtitle-font-size:             1.1rem;
 $post-list-item-summary-font-size:              1rem;
@@ -198,7 +205,7 @@ $dark-mode-post-list-item-divider-color:        $dark-mode-divider-color;
 // ===
 // Page
 //
-$page-title-font-size:                          $h1-font-size;// * 1.1;
+$page-title-font-size:                          $h1-font-size * 1.25;
 $page-title-mobile-font-size:                   $h1-font-size * 0.9;
 $page-title-part-font-size:                     $page-title-font-size * 0.75;
 $page-title-part-mobile-font-size:              $page-title-mobile-font-size * 0.8;

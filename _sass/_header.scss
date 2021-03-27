@@ -59,14 +59,14 @@
       .title {
         font-family: $header-title-font-family;
         font-size: $header-title-mobile-font-size;
-        font-weight: 500;
+        font-weight: 700;
         line-height: 1;
-        letter-spacing: -1px;
+        // letter-spacing: -1px;
         color: $header-title-color;
       }
 
       .tagline {
-        font-size: 0.8rem;
+        font-size: 0.85rem;
         margin-left: 0.1rem;
       }
     }
@@ -86,7 +86,7 @@
       list-style: none;
       margin: 0;
       padding: 0;
-      font-size: 0.85em;
+      font-size: 0.9em;
       text-transform: uppercase;
       letter-spacing: 0.15em;
       text-align: center;
@@ -234,11 +234,11 @@
         
         .title {
           font-size: $header-title-font-size;
-          line-height: 1.5;
+          line-height: 1.2;
         }
 
         .tagline {
-          font-size: 0.9rem;
+          font-size: 1rem;
           line-height: 1.5;
         }
       }
