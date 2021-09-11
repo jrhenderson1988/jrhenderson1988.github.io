@@ -14,7 +14,7 @@ permalink: /about
 {% assign pro = current_year | minus: site.professional_beginning_year | plus: extra %}
 {% assign total = current_year | minus: site.beginning_year | plus: extra %}
 
-I'm a software engineer and consultant, working as a Senior Developer at [Scott Logic](https://www.scottlogic.com/) based in Newcastle, UK.
+I'm a software engineer based near Newcastle, UK.
 
 I've been developing software professionally for about {{ pro }} years ({{ total }} years total) and if it's possible I think I love it more now than I did when I started. I'm full-stack but lean much more towards backend development and I find that my primary interests are within microservices, distributed systems, search engines and language design.
 

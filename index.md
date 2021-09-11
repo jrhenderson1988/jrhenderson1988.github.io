@@ -3,7 +3,7 @@ layout: home
 title: A Newcastle based software engineer
 ---
 
-I'm a software engineer and consultant, working as a Senior Developer at [Scott Logic](https://www.scottlogic.com/).
+I'm a software engineer based near Newcastle, UK.
 
 I live and breathe software engineering and find that my interests mostly lie within the areas of microservices, distributed systems, search engines and learning new languages.
 
