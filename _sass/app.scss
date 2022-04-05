@@ -47,7 +47,7 @@ $subheading-color:                              #555555 !default;
 $text-color:                                    #000000 !default;
 $background-color:                              #fdfdfd !default;
 // $brand-color:                                   #10bcf9 !default;
-$brand-color:                                   #ec6313 !default;
+$brand-color:                                   #9e5eda !default;
 $divider-color:                                 #e8e8e8 !default;
 $offset-background-color:                       #efeffa !default;//#eef !default;
 $offset-color:                                  lighten($text-color, 10%) !default;
@@ -140,7 +140,8 @@ $header-text-color:                             $text-color;
 $header-title-color:                            $heading-color;
 $header-link-color:                             $text-color;
 $header-divider-color:                          $divider-color;
-$header-logo-box-shadow:                        0 0 3px 3px rgba($brand-color, 0.3);
+$header-logo-border-color:                      $brand-color;
+// $header-logo-box-shadow:                        0 0 3px 3px rgba($brand-color, 0.3);
 $header-navigation-hover-color:                 $brand-color;
 $header-navigation-active-color:                $brand-color;
 
