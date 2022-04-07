@@ -43,14 +43,6 @@
           border-bottom-color: if($dark, $dark-mode-header-divider-color, $header-divider-color);
         }
       }
-
-      .social-icons {
-        a {
-          border-color: if($dark, $dark-mode-header-divider-color, $header-divider-color);
-          color: if($dark, $dark-mode-header-link-color, $header-link-color);
-          fill: if($dark, $dark-mode-header-link-color, $header-link-color);
-        }
-      }
     }
 
     .menu-icon {
