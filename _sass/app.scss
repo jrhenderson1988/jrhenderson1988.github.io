@@ -20,7 +20,7 @@ $base-code-font-family:                         monospace !default;
 // $base-heading-font-family:                      "Oxygen", Arial, sans-serif !default;
 $base-heading-font-family:                      Lato, Arial, sans-serif !default;
 $base-heading-font-size-multiplier:             0.9;
-$base-font-size:                                16px !default;
+$base-font-size:                                18px !default;
 $base-font-weight:                              400 !default;
 $base-line-height:                              1.6 !default;
 
@@ -55,8 +55,8 @@ $link-color:                                    $brand-color !default;
 $link-hover-color:                              $brand-color !default;
 
 $dark-mode-heading-color:                       #ebe9f1 !default;
-$dark-mode-text-color:                          #bbbbbf !default;//#cccccc !default;
-$dark-mode-background-color:                    #1e1e21 !default;
+$dark-mode-text-color:                          #eeeeef !default;//#cccccc !default;
+$dark-mode-background-color:                    #1c191f !default;
 $dark-mode-divider-color:                       #2b2b2b !default;//#222225 !default;
 $dark-mode-offset-background-color:             lighten($dark-mode-background-color, 2%) !default;
 $dark-mode-offset-color:                        #c5c8c6 !default;
