@@ -2,7 +2,8 @@
 //@import url(https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i);
 // @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 // @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway&display=swap');
 
 // Define defaults for each variable.
 
@@ -279,7 +280,7 @@ $mobile-breakpoint:                             $md !default;
 // ===
 // Site header
 //
-$header-title-font-family:                      $base-heading-font-family; // TODO
+$header-title-font-family:                      'Raleway';//$base-heading-font-family; // TODO
 $header-title-font-size:                        1.7rem;
 
 $header-background-color:                       $background-color;
@@ -297,21 +298,22 @@ $header-vertical-padding:                       $spacing-unit * 2;
 $header-width:                                  360px;
 $header-logo-size:                              120px;
 
-$header-title-mobile-font-size:                 1.3rem;
-$header-mobile-position:                        fixed;
+$header-title-mobile-font-size:                 1.4rem;
 $header-mobile-vertical-padding:                $spacing-unit / 2;
 $header-mobile-horizontal-padding:              $spacing-unit / 2;
 $header-mobile-height:                          50px + ($header-mobile-vertical-padding * 2);
+$header-mobile-menu-icon-background-color:      $header-background-color;
 $header-mobile-menu-icon-color:                 $header-text-color;
 $header-mobile-menu-icon-hover-color:           $brand-color;
 
-$dark-mode-header-background-color:             $dark-mode-background-color;
-$dark-mode-header-text-color:                   $dark-mode-text-color;
-$dark-mode-header-title-color:                  $dark-mode-heading-color;
-$dark-mode-header-divider-color:                $dark-mode-divider-color;
-$dark-mode-header-link-color:                   $dark-mode-text-color;
-$dark-mode-header-mobile-menu-icon-color:       $dark-mode-header-link-color;
-$dark-mode-header-mobile-menu-icon-hover-color: $brand-color;
+$dark-mode-header-background-color:                   $dark-mode-background-color;
+$dark-mode-header-text-color:                         $dark-mode-text-color;
+$dark-mode-header-title-color:                        $dark-mode-heading-color;
+$dark-mode-header-divider-color:                      $dark-mode-divider-color;
+$dark-mode-header-link-color:                         $dark-mode-text-color;
+$dark-mode-header-mobile-menu-icon-background-color:  $dark-mode-header-background-color;
+$dark-mode-header-mobile-menu-icon-color:             $dark-mode-header-link-color;
+$dark-mode-header-mobile-menu-icon-hover-color:       $brand-color;
 
 // ===
 // Site content

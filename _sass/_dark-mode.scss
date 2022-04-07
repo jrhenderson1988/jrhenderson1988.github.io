@@ -46,6 +46,7 @@
     }
 
     .menu-icon {
+      background-color: if($dark, $dark-mode-header-mobile-menu-icon-background-color, $header-mobile-menu-icon-background-color);
       color: if($dark, $dark-mode-header-mobile-menu-icon-color, $header-mobile-menu-icon-color);
       fill: if($dark, $dark-mode-header-mobile-menu-icon-color, $header-mobile-menu-icon-color);
 

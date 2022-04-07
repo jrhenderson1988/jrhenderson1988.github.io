@@ -1,7 +1,7 @@
 .site-header {
   display: flex;
   align-items: center;
-  position: $header-mobile-position;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -9,7 +9,6 @@
   background: $header-background-color;
   color: $header-text-color;
   overflow: hidden;
-  border-bottom: 1px solid $header-divider-color;
   z-index: 10000000;
 
   a {
@@ -69,6 +68,7 @@
       .tagline {
         font-size: 0.85rem;
         margin-left: 0.1rem;
+        display: none;
       }
     }
   }
@@ -156,6 +156,14 @@
   }
 
   .menu-icon {
+    position: fixed;
+    top: 24px;
+    right: 10px;
+    background: $header-background-color;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
     color: $header-mobile-menu-icon-color;
     fill: $header-mobile-menu-icon-color;
     display: inline-flex;
@@ -176,6 +184,8 @@
 
 // Mobile active menu mode
 .site-header.active {
+  position: fixed;
+
   .navigation {
     left: 0;
     display: block;
@@ -241,6 +251,7 @@
         .tagline {
           font-size: 1rem;
           line-height: 1.5;
+          display: block;
         }
       }
     }
