@@ -22,7 +22,7 @@
         </main>
     </div>
 
-    <span class="dark-mode-toggle" id="dark-mode-toggle">
+    <span class="theme-toggle" id="theme-toggle">
       <span class="moon">
         {%- include icon-moon.html -%}
       </span>
@@ -54,11 +54,11 @@
           };
         }
 
-        var dmt = document.getElementById("dark-mode-toggle");
+        var dmt = document.getElementById("theme-toggle");
         var b = document.body;
         if (dmt && b) {
           dmt.onclick = function () {
-            b.className = toggleClass(b.className, "dark-mode");
+            b.className = toggleClass(b.className, "alternate-theme");
           };
         }
       })();

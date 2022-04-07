@@ -74,9 +74,156 @@ $code-background-color:                         $offset-background-color !defaul
 $code-text-color:                               $offset-color !default;
 $code-divider-color:                            $divider-color !default;
 
+$code-background-color-gd-x: #faa;
+$code-background-color-gd: #fdd;
+$code-background-color-gi-x: #afa;
+$code-background-color-gi: #dfd;
+$code-background-color-hll: #373b41;
+$code-text-color-bp: #999;
+$code-text-color-c: #998;
+$code-text-color-c1: #998;
+$code-text-color-cm: #998;
+$code-text-color-cp: #999;
+$code-text-color-cs: #999;
+$code-text-color-err: #a61717;
+$code-text-color-gd-x: #000;
+$code-text-color-gd: #000;
+$code-text-color-gh: #999;
+$code-text-color-gi-x: #000;
+$code-text-color-gi: #000;
+$code-text-color-go: #888;
+$code-text-color-gp: #555;
+$code-text-color-gr: #a00;
+$code-text-color-gt: #a00;
+$code-text-color-gu: #aaa;
+$code-text-color-h: $code-text-color;
+$code-text-color-il: #099;
+$code-text-color-k: $code-text-color;
+$code-text-color-kc: $code-text-color;
+$code-text-color-kd: $code-text-color;
+$code-text-color-kn: $code-text-color;
+$code-text-color-kp: $code-text-color;
+$code-text-color-kr: $code-text-color;
+$code-text-color-kt: #458;
+$code-text-color-l: #de935f;
+$code-text-color-ld: #b5bd68;
+$code-text-color-m: #099;
+$code-text-color-mf: #099;
+$code-text-color-mh: #099;
+$code-text-color-mi: #099;
+$code-text-color-mo: #099;
+$code-text-color-n: #008080;
+$code-text-color-na: #008080;
+$code-text-color-nb: #0086B3;
+$code-text-color-nc: #458;
+$code-text-color-nd: #008080;
+$code-text-color-ne: #900;
+$code-text-color-nf: #900;
+$code-text-color-ni: #800080;
+$code-text-color-nl: #f0c674;
+$code-text-color-nn: #008080;
+$code-text-color-no: #008080;
+$code-text-color-nt: #000080;
+$code-text-color-nv: #008080;
+$code-text-color-nx: #81a2be;
+$code-text-color-o: $code-text-color;
+$code-text-color-ow: $code-text-color;
+$code-text-color-p: $code-text-color;
+$code-text-color-py: $code-text-color;
+$code-text-color-s: #d14;
+$code-text-color-s1: #d14;
+$code-text-color-s2: #d14;
+$code-text-color-sb: #d14;
+$code-text-color-sc: #d14;
+$code-text-color-sd: #d14;
+$code-text-color-se: #d14;
+$code-text-color-sh: #d14;
+$code-text-color-si: #d14;
+$code-text-color-sr: #009926;
+$code-text-color-ss: #990073;
+$code-text-color-sx: #d14;
+$code-text-color-vc: #008080;
+$code-text-color-vg: #008080;
+$code-text-color-vi: #008080;
+$code-text-color-w: #bbb;
+
 $dark-mode-code-background-color:               $dark-mode-offset-background-color !default;
-$dark-mode-code-color:                          $dark-mode-offset-color !default;
+$dark-mode-code-text-color:                     $dark-mode-offset-color !default;
 $dark-mode-code-divider-color:                  $dark-mode-divider-color !default;
+
+$dark-mode-code-background-color-gd-x: #faa;
+$dark-mode-code-background-color-gd: #fdd;
+$dark-mode-code-background-color-gi-x: #afa;
+$dark-mode-code-background-color-gi: #dfd;
+$dark-mode-code-background-color-hll: #373b41;
+$dark-mode-code-text-color-bp: $dark-mode-code-text-color;
+$dark-mode-code-text-color-c: #969896;
+$dark-mode-code-text-color-c1: #969896;
+$dark-mode-code-text-color-cm: #969896;
+$dark-mode-code-text-color-cp: #969896;
+$dark-mode-code-text-color-cs: #969896;
+$dark-mode-code-text-color-err: #cc6666;
+$dark-mode-code-text-color-gd-x: #cc6666;
+$dark-mode-code-text-color-gd: #cc6666;
+$dark-mode-code-text-color-gh: $dark-mode-code-text-color;
+$dark-mode-code-text-color-gi-x: #b5bd68;
+$dark-mode-code-text-color-gi: #b5bd68;
+$dark-mode-code-text-color-go: #888;
+$dark-mode-code-text-color-gp: #969896;
+$dark-mode-code-text-color-gr: #a00;
+$dark-mode-code-text-color-gt: #a00;
+$dark-mode-code-text-color-gu: #8abeb7;
+$dark-mode-code-text-color-h: $dark-mode-code-text-color;
+$dark-mode-code-text-color-il: #de935f;
+$dark-mode-code-text-color-k: #b294bb;
+$dark-mode-code-text-color-kc: #b294bb;
+$dark-mode-code-text-color-kd: #b294bb;
+$dark-mode-code-text-color-kn: #b294bb;
+$dark-mode-code-text-color-kp: #b294bb;
+$dark-mode-code-text-color-kr: #b294bb;
+$dark-mode-code-text-color-kt: #b294bb;
+$dark-mode-code-text-color-l: #de935f;
+$dark-mode-code-text-color-ld: #b5bd68;
+$dark-mode-code-text-color-m: #de935f;
+$dark-mode-code-text-color-mf: #de935f;
+$dark-mode-code-text-color-mh: #de935f;
+$dark-mode-code-text-color-mi: #de935f;
+$dark-mode-code-text-color-mo: #de935f;
+$dark-mode-code-text-color-n: #f0c674;
+$dark-mode-code-text-color-na: #f0c674;
+$dark-mode-code-text-color-nb: $dark-mode-code-text-color;
+$dark-mode-code-text-color-nc: #f0c674;
+$dark-mode-code-text-color-nd: #8abeb7;
+$dark-mode-code-text-color-ne: #cc6666;
+$dark-mode-code-text-color-nf: #81a2be;
+$dark-mode-code-text-color-ni: $dark-mode-code-text-color;
+$dark-mode-code-text-color-nl: #f0c674;
+$dark-mode-code-text-color-nn: #f0c674;
+$dark-mode-code-text-color-no: #cc6666;
+$dark-mode-code-text-color-nt: #8abeb7;
+$dark-mode-code-text-color-nv: #cc6666;
+$dark-mode-code-text-color-nx: #81a2be;
+$dark-mode-code-text-color-o: #8abeb7;
+$dark-mode-code-text-color-ow: #8abeb7;
+$dark-mode-code-text-color-p: $dark-mode-code-text-color;
+$dark-mode-code-text-color-py: $dark-mode-code-text-color;
+$dark-mode-code-text-color-s: #b5bd68;
+$dark-mode-code-text-color-s1: #b5bd68;
+$dark-mode-code-text-color-s2: #b5bd68;
+$dark-mode-code-text-color-sb: #b5bd68;
+$dark-mode-code-text-color-sc: $dark-mode-code-text-color;
+$dark-mode-code-text-color-sd: #969896;
+$dark-mode-code-text-color-se: #de935f;
+$dark-mode-code-text-color-sh: #b5bd68;
+$dark-mode-code-text-color-si: #de935f;
+$dark-mode-code-text-color-sr: #b5bd68;
+$dark-mode-code-text-color-ss: #b5bd68;
+$dark-mode-code-text-color-sx: #b5bd68;
+$dark-mode-code-text-color-vc: #cc6666;
+$dark-mode-code-text-color-vg: #cc6666;
+$dark-mode-code-text-color-vi: #cc6666;
+$dark-mode-code-text-color-w: $dark-mode-code-text-color;
+
 
 // ===
 // Blockquotes
@@ -238,6 +385,15 @@ $page-content-vertical-spacing:                 $spacing-unit;
 $page-content-mobile-vertical-spacing:          $spacing-unit;
 
 // ===
+// Theme toggle
+//
+$theme-toggle-background-color: $dark-mode-background-color;
+$theme-toggle-text-color: $dark-mode-heading-color;
+
+$dark-mode-theme-toggle-background-color: $background-color;
+$dark-mode-theme-toggle-text-color: $text-color;
+
+// ===
 // Mixins
 //
 @mixin media($breakpoint) {
@@ -259,3 +415,27 @@ $page-content-mobile-vertical-spacing:          $spacing-unit;
   "./syntax-highlighting",
   "./dark-mode"
 ;
+
+// ===
+// Theme toggling
+//
+
+// In the default, light mode, if the theme-toggle 
+// class is present on the body, apply dark-mode.
+body.alternate-theme {
+  @include dark-mode(true);
+}
+
+@media (prefers-color-scheme: dark) {
+  // If the user prefers dark mode, apply the dark
+  // mode theme.
+  body {
+    @include dark-mode(true);
+  }
+
+  // but if the theme-toggle class is present on 
+  // the body, then apply light-mode instead
+  body.alternate-theme {
+    @include dark-mode(false);
+  }
+}

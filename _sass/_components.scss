@@ -1,6 +1,6 @@
-.dark-mode-toggle {
-  background-color: $dark-mode-background-color;
-  color: $dark-mode-heading-color;
+.theme-toggle {
+  background-color: $theme-toggle-background-color;
+  color: $theme-toggle-text-color;
   border-radius: 50%;
   padding: 10px;
   position: fixed;
@@ -12,8 +12,8 @@
   cursor: pointer;
 
   svg {
-    fill: $dark-mode-heading-color;
-    color: $dark-mode-heading-color;
+    fill: $theme-toggle-text-color;
+    color: $theme-toggle-text-color;
     display: inline-block;
     width: 20px;
     height: 20px;
