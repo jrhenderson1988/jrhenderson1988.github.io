@@ -3,7 +3,8 @@
 // @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 // @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
 // @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 // Define defaults for each variable.
 
@@ -14,13 +15,13 @@
 // $base-font-family:                              "Roboto", Arial, sans-serif !default;
 // $base-font-family:                              "Fira Sans", Arial, sans-serif !default;
 // $base-font-family:                              "Oxygen", Arial, sans-serif !default;
-$base-font-family:                              Lato, Arial, sans-serif !default;
+$base-font-family:                              'Jost', Arial, sans-serif !default;
 $base-code-font-family:                         monospace !default;
 // $base-heading-font-family:                      "Roboto", Arial, sans-serif !default;
 // $base-heading-font-family:                      "Fira Sans", Arial, sans-serif !default;
 // $base-heading-font-family:                      "Oxygen", Arial, sans-serif !default;
-$base-heading-font-family:                      Lato, Arial, sans-serif !default;
 $base-heading-font-size-multiplier:             0.9;
+$base-heading-font-family:                      'Jost', Arial, sans-serif !default;
 $base-font-size:                                18px !default;
 $base-font-weight:                              400 !default;
 $base-line-height:                              1.6 !default;
@@ -280,7 +281,7 @@ $mobile-breakpoint:                             $md !default;
 // ===
 // Site header
 //
-$header-title-font-family:                      'Raleway';//$base-heading-font-family; // TODO
+$header-title-font-family:                      'Jost';//$base-heading-font-family; // TODO
 $header-title-font-size:                        1.7rem;
 
 $header-background-color:                       $background-color;
