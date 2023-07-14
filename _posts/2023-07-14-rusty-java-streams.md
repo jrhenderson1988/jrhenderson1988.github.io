@@ -1,6 +1,6 @@
 ---
 title: Rusty Java Streams
-summary: ""
+summary: "Implementing streams in Java from scratch with inspiration from Rust's iterators."
 ---
 
 I've been tinkering with Rust for a few years at this point, on and off. Recently, I've been playing
