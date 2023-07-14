@@ -171,13 +171,11 @@ return a `List<T>` where `T` is the type of item the stream holds.
 
 ## Something concrete
 
-That's enough of the initial setup for the time being. Let's start defining something more concrete
-and start building out something that will actually do something. Right now, the `Stream` type has
-no concrete implementation, so let's start there.
+That's enough of the initial setup for the time being. Let's start defining something more concrete.
 
-We'll define a base implementation of the stream that will just hold some data. Successive calls to
-`next` will just return each of the items within that stream, so we'll use an internal _"pointer"_ 
-that will just hold the index of the current item in `items`:
+We'll define a base implementation of the `Stream` that will just hold some data. Successive calls
+to `next` will return each of the items within that stream, so we'll use an internal _"pointer"_
+that will hold the index of the current item in `items`:
 
 ```java
 public class ItemStream<T> implements Stream<T> {
@@ -288,7 +286,7 @@ public final class Collectors {
 }
 ```
 
-Finally, we can actually do something with a stream, albeit something not very useful:
+Finally, we can actually do something with a stream, though it's not particularly useful:
 
 ```java
 List<Integer> listOfInts = Stream.of(1, 2, 3, 4).collect(Collectors.toList());
@@ -297,8 +295,8 @@ assertEquals(List.of(1, 2, 3, 4), listOfInts);
 
 ## Stream operations
 
-Right now, all we can do with our custom streams implementation is define a new stream and collect 
-it into a list. That doesn't provide much value. Let's add some operations that make it more useful.
+Right now, all we can do is define a new stream and collect it into a list. That doesn't provide
+much value. Let's add some operations that make it more useful.
 
 Before we do that, let's define another interface:
 
@@ -313,14 +311,16 @@ A single method interface over generic types `T` and `R` where `T` represents th
 different. The `apply` function accepts an argument of type `T` and returns a value of type `R`.
 
 In Java 8 and above, lambdas can be used in place of single method interfaces like this one instead
-of having to create a concrete or anonymous implementation. The standard library has an interface
-almost identical to this one but it's trivial to write our own.
+of having to create a concrete or anonymous implementation.
+
+The standard library has an interface almost identical to this one but it's trivial to write our
+own.
 
 ### Map
 
-First up, quite a common operation for those familiar with functional programming, the map operation
-takes every value in a stream and _maps_ it to a new value, applying some sort of operation to each 
-item. The new value need not be the same type:
+First up, quite a common operation for those familiar with functional programming. The map operation
+takes each value in the stream and transforms it into a new value by applying the provided function
+to it. The new value need not be the same type:
 
 ```java
 public class MappedStream<T, R> implements Stream<R> {
@@ -353,10 +353,10 @@ providing additional functionality in their `next` methods. Because they only ac
 when `next` is called, they are also lazy and will only ever actually do work when a terminal
 operation (like calling `collect`) is invoked.
 
-When the `next` method of the `MappedStream` is called, it calls into the inner stream that it wraps
-to get its next item and calls the function with the value of that item if it is an
-`Option.some(...)` and just returns `Option.none()` without doing anything else if the inner stream
-returns `Option.none()`.
+When the `next` method of the `MappedStream` is called, it asks for the `next` value of the inner 
+stream that it wraps and calls its function with that value if it's an `Option.some(...)`. Otherwise
+it just returns `Option.none()` without doing anything else if the inner stream returns
+`Option.none()`.
 
 To make calling `map` available to the stream, let's add a method to `Stream`:
 
@@ -423,10 +423,10 @@ The `next` method is implemented by continually reading from the wrapped stream 
 when either:
 - the wrapped stream is exhausted i.e. the call to the wrapped stream's `next` method returns
   `Option.none()`, in which case `Option.none()` will be returned.
-- or the wrapped stream's `next` method returns `Option.some(...)` value where that value satisfies
-  the predicate provided, in which case that value will be returned in an `Option.some(...)`.
+- or the wrapped stream's `next` method returns an `Option.some(...)` value which satisfies the
+  predicate provided, in which case that value will be returned in an `Option.some(...)`.
 
-This has the effect if throwing away values in the stream that don't satisfy the predicate,
+This has the effect of throwing away values in the stream that don't satisfy the predicate,
 resulting in fewer values that will ultimately be returned, assuming that at least one value is
 discarded.
 
@@ -475,11 +475,10 @@ We start off with a stream of the names of 4 different programming languages.
 - The next stage, `filter`, creates a new `FilteredStream<String>` that wraps the 
   `MappedStream<String, String>` from the previous step and passes a predicate that returns `true`
   if the string contains the substring `"A"`.
-- Next, `map` again, we create a `MappedStream<String, Integer>` that wraps the
-  `FilteredStream<String>` from the previous step and passes a function that returns the length of
-  the given string.
+- Next, `map` creates a `MappedStream<String, Integer>` that wraps the `FilteredStream<String>` from
+  the previous step and passes a function that returns the length of the given string.
 
-Before calling `collect` we have a `Stream<Integer>` which concretely actually looks like this:
+Before calling `collect` we have a `Stream<Integer>` which concretely looks like this:
 
 ```java
 Stream<Integer> stream = new MappedStream<String, Integer>(
@@ -603,6 +602,9 @@ matching item was found in the stream:
   `IllegalStateException`.
 - If a fallback was specified, however (the two-argument constructor was used), then we can return 
   the fallback item.
+
+> Note: this `find` collector works differently to the one we have in Java, which typically returns
+`Optional.none()` if nothing is found and `Optional.of(value)` if there is a match.
 
 Let's create a couple of static methods in `Collectors` for our convenience:
 
@@ -735,3 +737,15 @@ through it:
   current value (`4`). We assign the result back to `acc` (6 * 4 = 24).
 - The final iteration returns `Option.none()` and the loop breaks. The value held by `acc` (`24`) is
   then returned.
+
+## Wrapping up
+
+This exercise was no more than than an attempt to test out my rough mental model of how Java's
+streams and Rust's iterators work. I wanted to build out a simplified implementation to illustrate
+how I percieve things operating under the hood. In reality, the actual implementations of these 
+features is undoubtedly more complex than shown here, with many more intricacies and use cases to
+consider.
+
+In doing this, I hoped to try to dispel some illusions and help others to achieve a better
+understanding of what's happening behind the scenes when using Java streams and Rust iterators. I
+hope this was useful to someone out there!
